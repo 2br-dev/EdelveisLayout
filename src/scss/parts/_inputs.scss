@@ -1,0 +1,288 @@
+*:focus{
+    outline: none;
+}
+
+.input-field{
+
+    position: relative;
+    padding-top: 15px;
+    margin: 6px 0;
+
+    & input[type="text"], 
+    & input[type="email"],
+    & input[type="phone"],
+    & input[type="password"],
+    & textarea{
+
+        &.styled{
+
+            background: transparent;
+            border: 0;
+            width: 100%;
+            line-height: 30px;
+    
+            &::placeholder{
+                color: transparent;
+            }
+    
+            & + label{
+                position: absolute;
+                pointer-events: none;
+                transition: top .2s, color .2s, font-size .2s;
+                left: 0;
+    
+                font-size: 16px;
+                top: 17px;
+            }
+    
+            &:not(:placeholder-shown), &:focus{
+    
+                & + label{
+                    font-size: 10px;
+                    top: 5px;
+                    color: #888;
+                }
+            }
+        }
+    }
+
+    & textarea{
+        min-height: 26px;
+        height: fit-content;
+        resize: none;
+        overflow-y: hidden;
+        // transition: height .2s;
+    }
+    
+    &:after{
+        content: '';
+        position: absolute;
+        display: block;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        border-bottom: 1px solid $text;
+    }
+
+    & input[type=file]{
+
+        &.styled{
+
+            display: none;
+            
+            & + label{
+                display: inline-block;
+                transform: translateY(-6px);
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+input[type="radio"]{
+
+    &.styled{
+
+        display: none;
+    
+        & + label{
+    
+            display: inline-block;
+            margin-right: 20px;
+            line-height: 30px;
+            cursor: pointer;
+            user-select: none;
+    
+            &:before{
+                content: '';
+                background: #eee;
+                box-shadow: 0 0 0 1px lighten(#888, 10) inset;
+                border-radius: 50%;
+                width: 16px;
+                height: 16px;
+                display: inline-block;
+                margin-right: 6px;
+                transform: translateY(2px);
+                transition: box-shadow .2s, background-color .2s;
+            }
+            
+            &:hover:before{
+                box-shadow: 0 0 0 1px #888 inset;
+            }
+        }
+    
+        &:checked{
+    
+            & + label{
+    
+                &:before{
+                    background: #fff;
+                    box-shadow: 0 0 0 5px $green inset;
+                }
+            }
+        }
+    }
+}
+
+input[type="checkbox"]{
+
+    &.styled{
+
+        display: none;
+    
+        & + label{
+    
+            user-select: none;
+            cursor: pointer;
+            position: relative;
+            line-height: 30px;
+            display: inline-block;
+    
+            &:before{
+                content: '';
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+                background: #eee;
+                box-shadow: 0 0 0 1px lighten(#888, 10) inset;
+                margin-right: 6px;
+                border-radius: 4px;
+                transform: translateY(2px);
+                transition: box-shadow .2s;
+            }
+    
+            &:after{
+                content: '';
+                display: block;
+                border-bottom: 2px solid #fff;
+                border-right: 2px solid #fff;
+                width: 5px;
+                height: 9px;
+                transform-origin: bottom right;
+                transform: rotate(45deg);
+                opacity: 0;
+                position: absolute;
+                left: 0;
+                top: 7px;
+                z-index: 2;
+                transition: opacity .2s;
+            }
+    
+            &:hover:before{
+                box-shadow: 0 0 0 1px #888 inset;
+            }
+    
+        }
+        &:checked{
+    
+            & + label{
+    
+                &:before{
+                    box-shadow: 0 0 0 8px $green inset;
+                }
+    
+                &:after{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.dropdown-wrapper{
+
+    position: relative;
+    cursor: pointer;
+    margin: 10px 0;
+    
+    & .current{
+        padding: 3px 36px 4px 8px;
+        background: #fff;
+        border: 1px solid rgba(black, .1);
+        border-radius: 4px;
+        position: relative;
+        transition: background-color .2s;
+        box-sizing: border-box;
+        line-height: 20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        
+        &:after{
+            content: '';
+            border-radius: 4px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: $green url(../img/Dropdown_chevron.svg) center center no-repeat;
+            width: 28px;
+            height: 28px;
+            transition: background-color .2s;
+        }                    
+    }
+
+    &:hover{
+
+        & .current{
+            background: #fff;
+
+            &:after{
+                background-color: lighten($green, 15);
+            }
+        }
+    }
+
+    & .popup{
+        background: #fff;
+        position: absolute;
+        z-index: 5;
+        top: 100%;
+        left: 0px;
+        min-width: 100%;
+        border-radius: 4px;
+        overflow: hidden;
+        transition: opacity .2s, transform .2s;
+        transform: translateY(-5px);
+        opacity: 0;
+        pointer-events: none;
+        box-shadow: 0 2px 6px rgba(black, .4);
+
+
+        &.open{
+            opacity: 1;
+            transform: none;
+            pointer-events: all;
+        }
+        
+        & a{
+            color: $text;
+            display: block;
+            min-width: 100%;
+            width: fit-content;
+            padding: 0 10px;           
+            line-height: 36px;
+            box-sizing: border-box;
+            white-space: nowrap;
+
+            &:hover{
+                background: #eeeeee;
+            }
+        }
+    }
+}
+
+input[type="number"]{
+    
+    border: 0;
+    background: transparent;
+    width: 30px;
+    text-align: center;
+    -moz-appearance: textfield;
+    line-height: 32px;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}

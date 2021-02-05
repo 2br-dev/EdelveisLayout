@@ -1,0 +1,15 @@
+@import './framework/materialize';
+
+
+// Parts =================================================
+@import './parts/vars';
+@import './parts/nav';
+@import './parts/helpers';
+@import './parts/footer';
+@import './parts/card';
+@import './parts/inputs';
+
+// // Pages =================================================
+@import './pages/main';
+@import './pages/catalog';
+@import './pages/service';

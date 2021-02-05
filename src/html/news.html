@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('./parts/head.html', {title: "Главная", })
+</head>
+<body>
+    @@include('./parts/header.html', class: "")
+    <main>
+        <div class="global-wrapper" id="news">
+            <section id="news">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="section-header">Новости компании</div>
+                        </div>
+                    </div>
+                    <div class="row flex">
+                        @@loop('./parts/news-entry.html', [
+                            {image: "/img/news/dealer.png", title: "Эдельвейс-Агро - дилер Wolf System GmbH", link: "/news-entry.html", intro: "Компания Эдельвейс-Агро получила дилерский сертификат компании Wolf System, тем самым получив официально право на реализацию продукции этой компании"},
+                            {image: "/img/news/patented.png", title: "Ropa больше не может предлагать свеклоуборочные комбайны с автоматическим однорядным ведением глубины", link: "/news-entry.html", intro: "В патентном споре инициированном HOLMER Maschinenbau GmbH к фирме Ropa Fahrzeug- und Maschinenbau GmbH было принято важное и положительное решение."},
+                            {image: "/img/news/silver-medal.png", title: "СЕРЕБРЯНАЯ МЕДАЛЬ ЗА HOLMER SMARTTURN", link: "/news-entry.html", intro: "Управляющее устройство позволяющее автоматический разворот самоходных комбайнов будет впервые награждено на Agritechnica 2017 Серебряной медалью гремиумом DLG."},
+                            {image: "/img/news/dealer.png", title: "Эдельвейс-Агро - дилер Wolf System GmbH", link: "/news-entry.html", intro: "Компания Эдельвейс-Агро получила дилерский сертификат компании Wolf System, тем самым получив официально право на реализацию продукции этой компании"},
+                            {image: "/img/news/patented.png", title: "Ropa больше не может предлагать свеклоуборочные комбайны с автоматическим однорядным ведением глубины", link: "/news-entry.html", intro: "В патентном споре инициированном HOLMER Maschinenbau GmbH к фирме Ropa Fahrzeug- und Maschinenbau GmbH было принято важное и положительное решение."},
+                            {image: "/img/news/silver-medal.png", title: "СЕРЕБРЯНАЯ МЕДАЛЬ ЗА HOLMER SMARTTURN", link: "/news-entry.html", intro: "Управляющее устройство позволяющее автоматический разворот самоходных комбайнов будет впервые награждено на Agritechnica 2017 Серебряной медалью гремиумом DLG."},
+                            {image: "/img/news/dealer.png", title: "Эдельвейс-Агро - дилер Wolf System GmbH", link: "/news-entry.html", intro: "Компания Эдельвейс-Агро получила дилерский сертификат компании Wolf System, тем самым получив официально право на реализацию продукции этой компании"},
+                            {image: "/img/news/patented.png", title: "Ropa больше не может предлагать свеклоуборочные комбайны с автоматическим однорядным ведением глубины", link: "/news-entry.html", intro: "В патентном споре инициированном HOLMER Maschinenbau GmbH к фирме Ropa Fahrzeug- und Maschinenbau GmbH было принято важное и положительное решение."},
+                            {image: "/img/news/silver-medal.png", title: "СЕРЕБРЯНАЯ МЕДАЛЬ ЗА HOLMER SMARTTURN", link: "/news-entry.html", intro: "Управляющее устройство позволяющее автоматический разворот самоходных комбайнов будет впервые награждено на Agritechnica 2017 Серебряной медалью гремиумом DLG."},
+                            {image: "/img/news/dealer.png", title: "Эдельвейс-Агро - дилер Wolf System GmbH", link: "/news-entry.html", intro: "Компания Эдельвейс-Агро получила дилерский сертификат компании Wolf System, тем самым получив официально право на реализацию продукции этой компании"},
+                            {image: "/img/news/patented.png", title: "Ropa больше не может предлагать свеклоуборочные комбайны с автоматическим однорядным ведением глубины", link: "/news-entry.html", intro: "В патентном споре инициированном HOLMER Maschinenbau GmbH к фирме Ropa Fahrzeug- und Maschinenbau GmbH было принято важное и положительное решение."},
+                            {image: "/img/news/silver-medal.png", title: "СЕРЕБРЯНАЯ МЕДАЛЬ ЗА HOLMER SMARTTURN", link: "/news-entry.html", intro: "Управляющее устройство позволяющее автоматический разворот самоходных комбайнов будет впервые награждено на Agritechnica 2017 Серебряной медалью гремиумом DLG."}
+                        ])
+                    </div>
+                    <div class="row">
+                        <div class="col s12">
+                            @@include('./parts/pagination.html')
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    @@include('./parts/footer.html')
+    @@include('./parts/scripts.html')
+</body>
+</html>

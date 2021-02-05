@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('./parts/head.html', {title: "Главная", })
+</head>
+<body>
+    @@include('./parts/header.html', class: "")
+    <main>
+        <div class="global-wrapper" id="catalog">
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="section-header">Каталог</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="catalog-wrapper">
+                                <div class="categories">
+                                    <div class="sidebar-navi" data-top="Главная">
+                                        <div class="folder-back-wrapper">
+                                            <a id="folder-back" class="icon back" title="Назад" data-top="Главная"><span id="folder-name">Главная</span></a>
+                                        </div>
+                                    </div>
+                                    @@include('./parts/catalog.html')
+                                </div>
+                                <div class="products">
+                                    @@loop('./parts/card1.html', [
+                                        {title: "Трактор KUBOTA (Кубота)", description: "Трактор KUBOTA (Кубота)", image: "/img/fish/kubota.png", link: "/product.html", more:false, lazy: false},
+                                        {title: "Great Planes", description: "УЛЬТРА-ЧИЗЕЛЬ", image: "/img/fish/great-planes1.png", link: "/product.html", more:false, lazy: false},
+                                        {title: "Great Planes", description: "Дисковой подкормщик Nutri-Pro®", image: "/img/fish/great-planes2.png", link: "/product.html", more:false, lazy: false},
+                                        {title: "Kverneland TLG", description: "Сверхмощный точный культиватор", image: "/img/fish/kverneland.png", link: "/product.html", more: false, all: "/products.html"},
+                                        {title: "Моторное масло", description: "ELF EVOLUTION 900 NF 5W-40 Синтетическое 4 л", image: "/img/fish/elf.png", link: "/product.html", more:false, lazy: true},
+                                        {title: "Моторное масло", description: "MOBIL 1 X1 SN PLUS 5W-30 Синтетическое 4 л", image: "/img/fish/mobil.png", link: "/product.html", more:false, lazy: true},
+                                        {title: "Моторное масло", description: "MOBIL SUPER 3000 X1 5W-40 Синтетическое 1 л", image: "/img/fish/mobil2.png", link: "/product.html", more:false, lazy: true},
+                                        {title: "Моторное масло", description: "Shell MOTOR OIL 10W-40 Полусинтетическое 4 л", image: "/img/fish/shell.png", link: "/product.html", more: false, all: "/products.html"}
+                                    ])
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12">
+                            @@include('./parts/pagination.html')
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    @@include('./parts/footer.html')
+    @@include('./parts/scripts.html')
+</body>
+</html>

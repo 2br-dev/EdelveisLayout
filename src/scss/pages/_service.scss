@@ -1,0 +1,57 @@
+#service{
+
+    & .service-top{
+
+        background: #222424;
+        margin-top: -1px;
+
+        color: #90989C;
+
+        & strong{
+            font-weight: 500;
+            color: #fff;
+        }
+
+        & .row{
+
+            display: flex;
+
+            & .col{
+
+                &.info{
+                    padding-bottom: 60px;
+                }
+
+                & h1{
+                    text-transform: uppercase;
+                    font-size: 36px;
+                }
+        
+                & a{
+                    color: #90989C;
+        
+                    &:hover{
+                        color: #ccc;
+                    }
+                }
+        
+                & .lazy-image{
+                    height: 100%;
+                    background-position: right center;
+                }
+            }
+        }
+
+        
+    }
+
+    & .service-left{
+
+        padding-top: 66.5%;
+        background-size: cover;
+    }
+
+    & #request{
+        margin-bottom: 0;
+    }
+}

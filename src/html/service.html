@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('./parts/head.html', {title: "Главная", })
+</head>
+<body>
+    @@include('./parts/header.html', class: "")
+    <main>
+        <div class="global-wrapper" id="service">
+            <div class="service-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col m6 s12 info">
+                            <h1 class="condensed">сервисная служба</h1>
+                            <p>В период сезона уборки наша сервисная служба <strong>работает в режиме 24/7</strong>. По всем вопросам сервисного обслуживания обращайтесь по телефонам:</p>
+                            <ul>
+                                <li class="phone">+7(86130) 9-03-21 </li>
+                                <li class="empty">+7-905-403-25-52</li>
+                                <li class="mail"><a href="">edelveis.agro@gmail.com</a></li>
+                            </ul>
+                        </div>
+                        <div class="col m6 hide-on-small-only">
+                            <div class="lazy-image" data-src="/img/service-top.png"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col l5 m6 s12">
+                            <p>
+                                <div class="lazy-image service-left" data-src="/img/service-left.png"></div>
+                            </p>
+                        </div>
+                        <div class="col l7 m6 s12">
+                            <p>Сервисная служба компании ЭДЕЛЬВЕЙС-АГРО состоит из высококвалифицированных сервисных инженеров, прошедших обучение на заводах-изготовителях, и имеющих соответствующие сертификаты-допуски. Мы готовы выполнить любые задачи по ремонту и наладке техники HOLMER и Kverneland.</p>
+                            <p>Помимо ремонта техники «в поле» выездными бригадами, мы также производим в период межсезонья капитальный ремонт техники HOLMER и Kverneland в нашем цеху, с предоставлением гарантии на все детали и узлы, подвергшиеся ремонту (за исключением быстроизнашиваемых деталей, а также естественного износа деталей и узлов).  </p>
+                            <p>Сервисная служба компании ЭДЕЛЬВЕЙС-АГРО по Вашему заказу осуществит полную дефектовку комбайнов, которая поможет Вам самостоятельно оценить и спрогнозировать стоимость подготовки комбайнов к уборочной компании. Наши специалисты смогут выявить все проблемные места Вашей техники, что позволит Вам своевременно их устранить, избегая простоев машин в период уборки.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="request" class="form-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col m6 s12">
+                            <div class="form-header condensed">запрос в сервисную службу</div>
+                            <p>С Вашей техникой случилась беда? Что-то сломалось, не работает, или работает не так хорошо, как хотелось бы? Мы поможем Вам решить Вашу проблему. Специалисты сервисной службы произведут диагностику и ремонт проблемной техники. Для этого оставьте заявку, воспользовавшись представленной формой обратной связи. </p>
+                            <p>Пожалуйста, имейте в виду, что используя данную форму, Вы даете свое согласие на использование и обработку Ваших персональных данных согласно Политике конфиденциальности и Пользововательского соглашение на обработку персональных данных согласно Федеральному закону «О персональных данных» от 27.07.2006 N 152-ФЗ</p>
+                        </div>
+                        <div class="col m6 s12">
+                            <form action="" class="row">
+                                <div class="col m4">
+                                    <div class="input-field"><input type="text" placeholder="Ваше имя" class="styled"><label for="">Ваше имя</label></div>
+                                </div>
+                                <div class="col m4">
+                                    <div class="input-field"><input type="text" placeholder="Контактный телефон" class="styled"><label for="">Контактный телефон</label></div>
+                                </div>
+                                <div class="col m4">
+                                    <div class="input-field"><input type="text" placeholder="Марка техники" class="styled"><label for="">Марка техники</label></div>
+                                </div>
+                                <div class="col s12">
+                                    <div class="input-field"><textarea name="" id="" cols="30" rows="10" placeholder="Комментарий" class="styled"></textarea><label for="">Комментарий</label></div>
+                                </div>
+                                <div class="col s12 right-align"><a class="btn waves-effect waves-dark">Отправить</a></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    @@include('./parts/footer.html')
+    @@include('./parts/scripts.html')
+</body>
+</html>
