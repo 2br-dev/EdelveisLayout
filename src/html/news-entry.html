@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('./parts/head.html', {title: "Главная", })
+</head>
+<body>
+    @@include('./parts/header.html', class: "")
+    <main>
+        <div class="global-wrapper" id="news-entry">
+            <section id="news">
+                <div class="container">
+                    <section>
+                        <div class="row">
+                            <div class="col s12">
+                                <div class="section-header condensed">Ropa больше не может предлагать свеклоуборочные комбайны с&nbsp;автоматическим однорядным ведением глубины</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col l5 m6 s12">
+                                <div class="lazy-image news-left" data-src="/img/news/patented.png">
+                                    &nbsp;
+                                </div>
+                            </div>
+                            <div class="col l6 offset-l1 m6 s12">
+                                <p>В патентном споре инициированном HOLMER Maschinenbau GmbH к фирме Ropa Fahrzeug- und Maschinenbau GmbH было принято важное и положительное решение. Ropa признает исключительные права HOLMER на патент EP 3119182 и соответствующие патентные заявки или выданные патенты в ЕС, RUS, UA, CN, US, CA. С 23.02.2019 Ropa больше не может предлагать свеклоуборочные комбайны с автоматическим порядным ведением глубины.</p>
+                                <p>За машины, поставленные Ropa в 2017 и 2018 годах с этой технологией Ropa заплатит штраф на EXEL / HOLMER.    Ropa или владельцы этих машин (2017 и 2018 г.в.) не должны удалять встроенную технологию и могут продолжать ее использовать. Если другие комбайны по уборке сахарной свеклы от фирмы Ropa будут замечены в нарушение патента, то Ropa должна заплатить штраф в размере 50.000,- евро за каждое нарушение. Ropa должна убрать автоматическую функцию для порядного ведения глубины для комбайнов, произведенных после 22.02.2019, убрать из терминала и удалить соответствующие компоненты. Ни внешние партнёры фирмы Ropa, ни персонал Ropa не могут разрешить ввод в эксплуатацию или модернизацию автоматической функции для однорядного ведения глубины. Предыдущие статьи, заметки и иллюстрации автоматической функции для порядного ведения глубины должны быть удалены во всех рекламных материалах Ropa в течение 10 дней. </p>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="row">
+                            <div class="col s12">
+                                @@include('./parts/action.html')
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="row">
+                            <div class="col s12">
+                                <h2 class="condensed">Другие новости</h2>
+                            </div>
+                        </div>
+                        <div class="row flex">
+                            @@loop('./parts/news-entry.html', [
+                            {image: "/img/news/dealer.png", title: "Эдельвейс-Агро - дилер Wolf System GmbH", link: "/news-entry.html", intro: "Компания Эдельвейс-Агро получила дилерский сертификат компании Wolf System, тем самым получив официально право на реализацию продукции этой компании"},
+                            {image: "/img/news/patented.png", title: "Ropa больше не может предлагать свеклоуборочные комбайны с автоматическим однорядным ведением глубины", link: "/news-entry.html", intro: "В патентном споре инициированном HOLMER Maschinenbau GmbH к фирме Ropa Fahrzeug- und Maschinenbau GmbH было принято важное и положительное решение."},
+                            {image: "/img/news/silver-medal.png", title: "СЕРЕБРЯНАЯ МЕДАЛЬ ЗА HOLMER SMARTTURN", link: "/news-entry.html", intro: "Управляющее устройство позволяющее автоматический разворот самоходных комбайнов будет впервые награждено на Agritechnica 2017 Серебряной медалью гремиумом DLG."}
+                        ])
+                        </div>
+                    </section>
+
+                </div>
+            </section>
+        </div>
+    </main>
+    @@include('./parts/footer.html')
+    @@include('./parts/scripts.html')
+</body>
+</html>

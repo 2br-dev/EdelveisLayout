@@ -23,7 +23,7 @@
                                             <a id="folder-back" class="icon back" title="Назад" data-top="Главная"><span id="folder-name">Главная</span></a>
                                         </div>
                                     </div>
-                                    @@include('./parts/catalog.html')
+                                    @@include('./parts/catalog.html', {class: 'expanded'})
                                 </div>
                                 <div class="products">
                                     @@loop('./parts/card1.html', [

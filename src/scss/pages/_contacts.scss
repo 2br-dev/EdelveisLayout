@@ -1,0 +1,88 @@
+@mixin flex{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+
+    & .key{
+        width: 100%;
+    }
+}
+
+@mixin table {
+    display: table-row;
+
+    & .key{
+        width: unset;
+    }
+
+    & .key, & .value{
+        padding-bottom: 10px;
+    }
+}
+
+#contacts{
+    color: lighten($text, 15);
+
+    & #map{
+        height: 50vh;
+
+        & .ol-overlaycontainer-stopevent{
+            display: none;
+        }
+    }
+
+    & .contacts-block{
+
+        & .contacts-header{
+
+            font-weight: bold;
+            font-size: 24px;
+            text-transform: uppercase;
+            color: $text;
+        }
+
+        & .contacts-subheader{
+            font-weight: bold;
+            text-transform: uppercase;
+            color: $text;
+        }
+
+        & .kv-wrapper{
+
+            & .kv-pair{
+    
+                display: table-row;
+    
+                & .key{
+                    display: table-cell;
+                    padding-right: 20px;
+                    font-weight: 500;
+                }
+    
+                & .value{
+                    display: table-cell;
+                }
+
+                @media(max-width: 1490px){
+                    @include flex();
+                }
+
+                @media(max-width: 992px){
+                    @include table();
+                }
+
+                @media(max-width: 700px){
+                    @include flex();
+                }
+
+                @media(max-width: 600px){
+                    @include table();
+                }
+
+                @media(max-width: 400px){
+                    @include flex();
+                }
+            }
+        }
+    }
+}

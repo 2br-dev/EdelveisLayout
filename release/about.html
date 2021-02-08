@@ -18,7 +18,7 @@
         <div class="container condensed">
             <div class="nav-wrapper">
                 <div class="burger-wrapper">
-                    <a class="burger">
+                    <a class="burger sidenav-trigger" data-target="mobile-menu">
                         <i class="material-icons">menu</i>
                     </a>
                 </div>
@@ -38,7 +38,7 @@
                     <ul class="bottom">
                         <li class="top-catalog-wrapper dot-link">
                             <a>Каталог</a>
-                            <ul class="expanded">
+                            <ul class="@@class">
     <li class="folder">
         <a href="/catalog.html">Техника</a>
         <a class="folder-link"></a>
@@ -198,170 +198,223 @@
         </div>
     </nav>
 </header>
+<div class="sidenav" id="mobile-menu">
+    <div class="user-view">
+        <div class="background lazy-image" data-src="/img/header_bgr.svg">
+            <a href="/img/logo.svg" class="logo lazy-image" data-src="/img/logo.svg"></a>
+        </div>
+    </div>
+    <div class="categories">
+        <div class="sidebar-navi" data-top="Главная">
+            <div class="folder-back-wrapper">
+                <a id="folder-back" class="icon back" title="Назад" data-top="Главная"><span id="folder-name">Главная</span></a>
+            </div>
+        </div>
+        <ul class="expanded">
+            <li class="folder">
+                <a href="/catalog.html">Каталог</a>
+                <a class="folder-link"></a>
+                <ul class="">
+    <li class="folder">
+        <a href="/catalog.html">Техника</a>
+        <a class="folder-link"></a>
+        <ul>
+            <li><a href="/catalog.html">Holmer</a></li>
+            <li><a href="/catalog.html">Kubota</a></li>
+            <li class="folder">
+                <a href="/catalog.html">Kverneland</a>
+                <a class="folder-link"></a>
+                <ul>
+                    <li class="folder">
+                        <a href="/catalog.html">Обработка почвы</a>
+                        <a class="folder-link"></a>
+                        <ul>
+                            <li class="folder"><a href="/catalog.html">Культиваторы</a>
+                                <ul>
+                                    <li><a href="/catalog.html">Предпосевные культиваторы</a></li>
+                                    <li><a href="/catalog.html">Стерневые культиваторы</a></li>
+                                    <li><a href="/catalog.html">Глубокорыхлители</a></li>
+                                    <li><a href="/catalog.html">Технология Strip Till</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/catalog.html">Дисковые бороны</a></li>
+                            <li class="folder">
+                                <a href="/catalog.html">Уплотнители почвы и катки</a>
+                                <a class="folder-link"></a>
+                                <ul>
+                                    <li><a href="/catalog.html">Катки</a></li>
+                                    <li><a href="/catalog.html">Packomat</a></li>
+                                </ul>
+                            </li>
+                            <li class="folder">
+                                <a href="/catalog.html">Плуги</a>
+                                <a class="folder-link"></a>
+                                <ul>
+                                    <li><a href="/catalog.html">Навесной оборотный плуг</a></li>
+                                    <li><a href="/catalog.html">Полунавесные оборотные плуги</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/catalog.html">Активные бороны</a></li>
+                        </ul>
+                    </li>
+                    <li class="folder">
+                        <a href="/catalog.html">Посевная техника</a>
+                        <a class="folder-link"></a>
+                        <ul>
+                            <li><a href="/catalog.html">Сеялки точного высева</a></li>
+                            <li><a href="/catalog.html">Пневматические зерновые сеялки</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/catalog.html">Разбрасыватели</a></li>
+                    <li class="folder"><a href="/catalog.html">Опрыскиватели</a>
+                        <ul>
+                            <li><a href="/catalog.html">Навесные опрыскиватели</a></li>
+                            <li><a href="/catalog.html">Прицепные опрыскиватели</a></li>
+                            <li><a href="/catalog.html">Самоходные опрыскиватели</a></li>
+                        </ul>
+                    </li>
+                    <li class="folder"><a href="/catalog.html">Кормозаготовительная техника</a>
+                        <ul>
+                            <li class="folder">
+                                <a href="/catalog.html">Косилки и косилки-плющилки</a>
+                                <a class="folder-link"></a>
+                                <ul>
+                                    <li><a href="/catalog.html">Фронтальные косилки</a></li>
+                                    <li><a href="/catalog.html">Задненавесные косилки</a></li>
+                                    <li><a href="/catalog.html">Дисковые косилки с кондиционерами, Фронтальные навесные</a></li>
+                                    <li><a href="/catalog.html">Задненавесные косилки c кондиционером</a></li>
+                                    <li><a href="/catalog.html">Прицепные косилки с кондиционером</a></li>
+                                </ul>
+                            </li>
+                            <li class="folder">
+                                <a href="/catalog.html">Грабли и Ворошилки</a>
+                                <a class="folder-link"></a>
+                                <ul>
+                                    <li><a href="/catalog.html">Однороторные грабли</a></li>
+                                    <li><a href="/catalog.html">Многороторные грабли, боковые</a></li>
+                                    <li><a href="/catalog.html">Многороторные грабли, центральный валок</a></li>
+                                    <li><a href="/catalog.html">Навесные ворошилки</a></li>
+                                    <li><a href="/catalog.html">Прицепные ворошилки</a></li>
+                                    <li><a href="/catalog.html">Ворошилки с несущей рамой</a></li>
+                                </ul>
+                            </li>
+                            <li class="folder">
+                                <a href="/catalog.html">Пресс-подборщики</a>
+                                <a class="folder-link"></a>
+                                <ul>
+                                    <li><a href="/catalog.html">Рулонные пресс-подборщики</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/catalog.html">Обмотчики рулонных пресс-подборщиков</a></li>
+                            <li><a href="/catalog.html">Мульчировщики</a></li>
+                        </ul>
+                    </li>
+                    <li class="folder">
+                        <a href="/catalog.html">Кормораздаточная техника</a>
+                        <a class="folder-link"></a>
+                        <ul>
+                            <li><a href="/catalog.html">Измельчители тюков - Кормораздатчики</a></li>
+                        </ul>
+                    </li>
+                    <li class="folder">
+                        <a href="/catalog.html">Решения для точного земледелия</a>
+                        <a class="folder-link"></a>
+                        <ul>
+                            <li><a href="/catalog.html">IsoMatch products</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="folder">
+                <a href="/catalog.html">Great Plains</a>
+                <a class="folder-link"></a>
+                <ul>
+                    <li><a href="/catalog.html">Новые модели</a></li>
+                    <li><a href="/catalog.html">Вертикальная почвообработка</a></li>
+                    <li><a href="/catalog.html">Гибридные почвообрабатывающие орудия</a></li>
+                    <li><a href="/catalog.html">Традиционная почвообработка</a></li>
+                    <li><a href="/catalog.html">Пневматические сеялки</a></li>
+                    <li><a href="/catalog.html">Компактные сеялки</a></li>
+                    <li><a href="/catalog.html">Покровные культуры</a></li>
+                    <li><a href="/catalog.html">Механические сеялки</a></li>
+                    <li><a href="/catalog.html">Пропашные сеялки</a></li>
+                    <li><a href="/catalog.html">Роторные косилки</a></li>
+                    <li><a href="/catalog.html">Системы внесения удобрений</a></li>
+                    <li><a href="/catalog.html">Сцепки</a></li>
+                </ul>
+            </li>
+            <li><a href="/catalog.html">APV</a></li>
+        </ul>
+    </li>
+    <li class="folder">
+        <a href="/catalog.html">Масла и смазки</a>
+        <a class="folder-link"></a>
+        <ul>
+            <li><a href="/catalog.html">FUCHS</a></li>
+            <li><a href="/catalog.html">Agip</a></li>
+        </ul>
+    </li>
+    <li><a href="/catalog.html">Запчасти</a></li>
+</ul>
+            </li>
+            <li><a href="/service.html">Сервисная служба</a></li>
+            <li><a href="/news.html">Новости</a></li>
+            <li><a href="/about.html">О компании</a></li>
+            <li><a href="/contacts.html">Контакты</a></li>
+            <li><a href="/promo.html">Спецпредложения</a></li>
+        </ul>
+    </div>
+</div>
     <main>
-        <div id="map"></div>
         <div class="global-wrapper" id="about">
-            <div class="container">
-                <div class="row">
-                    <div class="col s12">
-                        <h1>контакты</h1>
-                        <div class="col l4 m6 s12">
-                            <div class="about-block">
-                                <div class="about-header">Отдел запасных частей</div>
-                                <div class="about-subheader">Запасные части HOLMER, GEBO</div>
-                                <ul>
-                                    <li>Протасов Павел Николаевич</li>
-                                    <li>Тел. +7 (903) 447-52-25</li>
-                                    <li>e-mail: <a href="mailto:protasov.holmer@gmail.com">protasov.holmer@gmail.com</a>
-                                    </li>
-                                </ul>
-                                <div class="about-subheader">Запасные части KVERNELAND, KUBOTA</div>
-                                <ul>
-                                    <li>Маскалев Александр Анатольевич</li>
-                                    <li>Тел. +7 (905) 438-25-52</li>
-                                    <li>e-mail: <a
-                                            href="mailto:kverneland.parts@gmail.com">kverneland.parts@gmail.com</a></li>
-                                </ul>
-                                <div class="about-subheader">Запасные части Great Plains, APV</div>
-                                <ul>
-                                    <li>Каширин Никита Вадимович</li>
-                                    <li>Тел. +7 (989) 265-54-50</li>
-                                    <li>e-mail: <a href="mailto:kvernelandrf020@gmail.com">kvernelandrf020@gmail.com</a>
-                                    </li>
-                                </ul>
-                            </div>
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12">
+                            <h1 class="condensed">О компании</h1>
+                        </div>
+                        <div class="col m6 s12">
+                            <div class="lazy-image about-left" data-src="/img/about-left.png"></div>
+                        </div>
+                        <div class="col m6 s12">
+                            <h2 class="condensed">Мы осуществляем поставку</h2>
+                            <ul class="styled-ul">
+                                <li>Свеклоуборочных комбайнов Holmer Terra Dos / Холмер Терра Дос, универсальных энергетических средств Holmer Terra Variant / Холмер Терра Вариант и свеклопогрузчиков очистителей Holmer Terra Felis / Холмер Терра Фелис, обеспечивая полный спектр Услуг от поставки техники, запасных частей, сервисного обслуживания, до капитального ремонта</li>
+                                <li>прицепной и навесной техники Kverneland / Квернеланд, являясь дилерским центром </li>
+                                <li>Техники APV / АПВ</li>
+                                <li>Всей гаммы запасных частей для техники: HOLMER - Холмер, Kverneland - Квернеланд, APV – АПВ, масел и смазочных материалов AGIP - Аджип и FUCHS - Фукс</li>
+                                <li>Фильтров топливных, масляных, воздушных, гидравлических</li>
+                                <li>Сельскохозяйственных шин MICHELIN для любой техники</li>
+                            </ul>
+                        </div>
+                        <div class="col m12">
+                            <p>
+                                Выполняем сервисное обслуживание и капитальный ремонт поставляемой сельскохозяйственной техники. Выездные сервисные бригады для ремонта техники в поле. Первостепенными задачами нашей компании являются: налаживание долгосрочных отношений с партнерами, быстрота и качество в поставке комплектующих, оказание информационно-консультативной помощи клиенту в выборе и приобретении товара, порядочность и взаимное уважение. Тем самым мы пытаемся минимизировать Ваши затраты на ремонт сельхозтехники импортного производства.
+                            </p>
                         </div>
                     </div>
-                    <div class="col s12">
-                        <h1></h1>
-                        <div class="col l4 m6 s12">
-                            <div class="about-block">
-                                <div class="about-header"></div>
-                                <div class="about-subheader">региональный менеджер</div>
-                                <ul>
-                                    <li>Бруяка Виталий Александрович</li>
-                                    <li>Тел. +7 (905) 408-13-31</li>
-                                    <li>e-mail: <a href="mailto:vitaliybruyaka@gmail.com">vitaliybruyaka@gmail.com</a>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li>Будко Сергей Сергеевич</li>
-                                    <li>Тел. +7 (905) 471-30-03</li>
-                                    <li>e-mail: <a href="mailto:budko-c@mail.ru">budko-c@mail.ru</a></li>
-                                </ul>
-                                <ul>
-                                    <li>Каримов Михаил Владимирович</li>
-                                    <li>Тел. +7 (961) 596-31-70</li>
-                                    <li>e-mail: <a href="mailto:m.ka009@mail.ru">m.ka009@mail.ru</a></li>
-                                </ul>
-                                <ul>
-                                    <li>Латуш Геннадий Викторович</li>
-                                    <li>Тел. +7 (961) 596-30-40</li>
-                                    <li>e-mail: <a href="mailto:latgen@mail.ru">latgen@mail.ru</a></li>
-                                </ul>
-                            </div>
-                            <div class="about-block">
-                                <div class="about-header">директор</div>
-                                <div class="about-subheader">действующий на основании Устава</div>
-                                <ul>
-                                    <li>Марцун Александр Николаевич</li>
-                                    <li>Тел: +7 (905) 403-777-9</li>
-                                </ul>
-                            </div>
+                </div>
+            </section>
+            <section class="certificates">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12 center-align">
+                            <h2 class="condensed">Сертификаты</h2>
                         </div>
-                        <div class="col l4 m6 s12">
-                            <div class="about-block">
-                                <div class="about-header">Сервисная служба</div>
-                                <div class="about-subheader">Начальник сервисной службы</div>
-                                <ul>
-                                    <li>Ковальчук Виктор Юрьевич</li>
-                                    <li>Тел. +7 (905) 403-25-52</li>
-                                    <li>e-mail: <a href="mailto:servis.edelveis@gmail.com">servis.edelveis@gmail.com</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col l4 m6 s12">
-                            <div class="about-block">
-                                <div class="about-header">Финансовый отдел и бухгалтерия</div>
-                                <div class="about-subheader">Заместитель директора по финансам</div>
-                                <ul>
-                                    <li>Легкова Елена Юрьевна</li>
-                                    <li>Тел. +7 (961) 596-29-23</li>
-                                    <li>e-mail: <a href="mailto:legkovae67@mail.ru">legkovae67@mail.ru</a></li>
-                                </ul>
-                                <div class="about-subheader">Главный бухгалтер</div>
-                                <ul>
-                                    <li>Максимова Марина Сергеевна</li>
-                                    <li>Тел. +7 (909) 467-49-42</li>
-                                    <li>e-mail: <a href="mailto:maksimova_0189@mail.ru">maksimova_0189@mail.ru</a></li>
-                                </ul>
-                                <div class="about-subheader">Офис-менеджер</div>
-                                <ul>
-                                    <li>Малышко Алла Викторовна</li>
-                                    <li>Тел +7 (903) 452-41-11, </li>
-                                    <li>факс: +7 (86130) 9-03-21</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col l4 m6 s12">
-                            <div class="about-block">
-                                <div class="about-header">сайты</div>
-                                <ul>
-                                    <li><a href="https://edelveis-agro.ru">edelveis-agro.ru</a></li>
-                                    <li><a href="https://holmer-maschinenbau.de/ru">holmer-maschinenbau.de/ru</a></li>
-                                    <li><a href="https://ru.kverneland.com">ru.kverneland.com</a></li>
-                                    <li><a href="https://apv-russia.ru">apv-russia.ru</a></li>
-                                    <li><a href="https://greatplainsint.com/ru">greatplainsint.com/ru</a></li>
-                                </ul>
-                            </div>
-                            <div class="about-block">
-                                <div class="about-header">
-                                    <div class="kv-wrapper">
-                                        <div class="kv-pair">
-                                            <div class="key">Юридический адрес</div>
-                                            <div class="value">352700, Россия, Краснодарский край, г.Тимашевск, ул.Выборная, 68, каб 10</div>
-                                        </div>
-                                        <div class="kv-pair">
-                                            <div class="key">Фактический адрес</div>
-                                            <div class="value">352700, Россия, Краснодарский край, г.Тимашевск, ул.Выборная, 68</div>
-                                        </div>
-                                        <div class="kv-pair">
-                                            <div class="key">ИНН</div>
-                                            <div class="value">2369005588</div>
-                                        </div>
-                                        <div class="kv-pair">
-                                            <div class="key">КПП</div>
-                                            <div class="value">236901001</div>
-                                        </div>
-                                        <div class="kv-pair">
-                                            <div class="key">К/С</div>
-                                            <div class="value">30101810200000000722</div>
-                                        </div>
-                                        <div class="kv-pair">
-                                            <div class="key">Р/С</div>
-                                            <div class="value">40702810000220000441 ООО КБ «КУБАНЬ КРЕДИТ» г. Краснодар</div>
-                                        </div>
-                                        <div class="kv-pair">
-                                            <div class="key">БИК</div>
-                                            <div class="value">040349722</div>
-                                        </div>
-                                        <div class="kv-pair">
-                                            <div class="key">ОГРН</div>
-                                            <div class="value">1172375048713</div>
-                                        </div>
-                                        <div class="kv-pair">
-                                            <div class="key">Телефон/факс</div>
-                                            <div class="value">+7 (86130) 9-03-21</div>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="col s12">
+                            <div class="carousel certificates-carousel" id="certificates">
+                                <a class="carousel-item lazy-image certificate" data-src="/img/fish/certificate.png"></a>
+                                <a class="carousel-item lazy-image certificate" data-src="/img/fish/certificate.png"></a>
+                                <a class="carousel-item lazy-image certificate" data-src="/img/fish/certificate.png"></a>
+                                <a class="carousel-item lazy-image certificate" data-src="/img/fish/certificate.png"></a>
+                                <a class="carousel-item lazy-image certificate" data-src="/img/fish/certificate.png"></a>
+                                <a class="carousel-item lazy-image certificate" data-src="/img/fish/certificate.png"></a>
+                                <a class="carousel-item lazy-image certificate" data-src="/img/fish/certificate.png"></a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </section>
         </div>
     </main>
     <footer>
@@ -412,10 +465,7 @@
         </div>
     </div>
 </footer>
-    <script src="/js/jquery.min.js"></script>
-<script src="/js/jquery.lazy.js"></script>
-<script src="/js/materialize.js"></script>
-<script src="/js/master.js"></script>
+    <script src="/js/master.js"></script>
 </body>
 
 </html>

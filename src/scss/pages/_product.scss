@@ -1,0 +1,30 @@
+#product{
+
+    & h1{
+        margin-bottom: 0;
+    }
+
+    & .product-image{
+        padding-top: 75%;
+        background-size: cover;
+    }
+
+    & #product-carousel{
+
+        margin-top: 30px;
+        // height: unset;
+
+        & .carousel-item{
+            box-sizing: border-box;
+            width: 170px;
+            height: 120px;
+            background-size: cover;
+            cursor: pointer;
+            transition: box-shadow .2s;
+
+            &:hover, &.active{
+                box-shadow: 0 0 0 4px $green inset;
+            }
+        }
+    }
+}

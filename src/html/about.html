@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('./parts/head.html', {title: "Главная", })
+</head>
+
+<body>
+    @@include('./parts/header.html', class: "")
+    <main>
+        <div class="global-wrapper" id="about">
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12">
+                            <h1 class="condensed">О компании</h1>
+                        </div>
+                        <div class="col m6 s12">
+                            <div class="lazy-image about-left" data-src="/img/about-left.png"></div>
+                        </div>
+                        <div class="col m6 s12">
+                            <h2 class="condensed">Мы осуществляем поставку</h2>
+                            <ul class="styled-ul">
+                                <li>Свеклоуборочных комбайнов Holmer Terra Dos / Холмер Терра Дос, универсальных энергетических средств Holmer Terra Variant / Холмер Терра Вариант и свеклопогрузчиков очистителей Holmer Terra Felis / Холмер Терра Фелис, обеспечивая полный спектр Услуг от поставки техники, запасных частей, сервисного обслуживания, до капитального ремонта</li>
+                                <li>прицепной и навесной техники Kverneland / Квернеланд, являясь дилерским центром </li>
+                                <li>Техники APV / АПВ</li>
+                                <li>Всей гаммы запасных частей для техники: HOLMER - Холмер, Kverneland - Квернеланд, APV – АПВ, масел и смазочных материалов AGIP - Аджип и FUCHS - Фукс</li>
+                                <li>Фильтров топливных, масляных, воздушных, гидравлических</li>
+                                <li>Сельскохозяйственных шин MICHELIN для любой техники</li>
+                            </ul>
+                        </div>
+                        <div class="col m12">
+                            <p>
+                                Выполняем сервисное обслуживание и капитальный ремонт поставляемой сельскохозяйственной техники. Выездные сервисные бригады для ремонта техники в поле. Первостепенными задачами нашей компании являются: налаживание долгосрочных отношений с партнерами, быстрота и качество в поставке комплектующих, оказание информационно-консультативной помощи клиенту в выборе и приобретении товара, порядочность и взаимное уважение. Тем самым мы пытаемся минимизировать Ваши затраты на ремонт сельхозтехники импортного производства.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="certificates">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12 center-align">
+                            <h2 class="condensed">Сертификаты</h2>
+                        </div>
+                        <div class="col s12">
+                            <div class="carousel certificates-carousel" id="certificates">
+                                <a class="carousel-item lazy-image certificate" data-src="/img/fish/certificate.png"></a>
+                                <a class="carousel-item lazy-image certificate" data-src="/img/fish/certificate.png"></a>
+                                <a class="carousel-item lazy-image certificate" data-src="/img/fish/certificate.png"></a>
+                                <a class="carousel-item lazy-image certificate" data-src="/img/fish/certificate.png"></a>
+                                <a class="carousel-item lazy-image certificate" data-src="/img/fish/certificate.png"></a>
+                                <a class="carousel-item lazy-image certificate" data-src="/img/fish/certificate.png"></a>
+                                <a class="carousel-item lazy-image certificate" data-src="/img/fish/certificate.png"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    @@include('./parts/footer.html')
+    @@include('./parts/scripts.html')
+</body>
+
+</html>

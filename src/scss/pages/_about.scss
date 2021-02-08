@@ -1,0 +1,25 @@
+#about{
+
+    & .about-left{
+        margin-top: 30px;
+        padding-top: 66.5%;
+        background-size: cover;
+    }
+
+    & .certificates-carousel{
+        height: 25vw;
+
+    }
+
+    & .certificates{
+        margin-bottom: 0;
+        background: $grey-block;
+        padding-bottom: 50px;
+
+        & .certificate{
+            width: 17vw;
+            height: 25vw;
+            padding-top: 0;
+        }
+    }
+}

@@ -4,6 +4,12 @@ body {
     background-size: 100% 200px;
     background-color: $paper;
 
+    & strong.subheader{
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 18px;
+    }
+
     &.main{
         background: url(../img/main_header_bgr.svg) top center no-repeat;
         background-size: 100% 600px;
@@ -11,6 +17,47 @@ body {
         @media(max-width: 700px){
             background-size: 160vw 90vw;
             background-position: top center;
+        }
+    }
+
+    & h1{
+        text-transform: uppercase;
+        font-size: 36px;
+        font-weight: 500;
+
+        &.condensed{
+            font-weight: 700;
+        }
+    }
+
+    & h2{
+        text-transform: uppercase;
+        font-size: 24px;
+        font-weight: 500px;
+
+        &.condensed{
+            font-weight: bold;
+        }
+    }
+
+    & .styled-ul{
+        padding-left: 30px;
+
+        & li{
+            margin-bottom: 10px;
+            position: relative;
+
+            &:before{
+                content: '';
+                position: absolute;
+                width: 14px;
+                height: 14px;
+                top: 4px;
+                left: -20px;
+                border-top-right-radius: 10px;
+                border-bottom-left-radius: 10px;
+                background: $green;
+            }
         }
     }
 
@@ -62,8 +109,6 @@ body {
     }
 
     & input{
-
-        font-family: 'Roboto Condensed';
 
         &:focus{
             outline: none;
@@ -164,7 +209,7 @@ body {
 
     & .form-wrapper{
         
-        background: #C4C4C4;
+        background: $grey-block;
         padding: 20px 0;
 
         & .container{
@@ -177,6 +222,27 @@ body {
             & .form-header{
                 font-size: 24px;
                 text-transform: uppercase;
+            }
+        }
+    }
+
+    & .sidenav{
+
+        & #folder-back{
+            margin: 0 15px;
+        }
+
+        & .user-view{
+            height: 140px;
+
+            & .background{
+                background-size: cover;
+
+                & .logo{
+                    display: block;
+                    height: 100%;
+                    background-size: 80% auto;
+                }
             }
         }
     }

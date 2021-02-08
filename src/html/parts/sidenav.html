@@ -1,0 +1,26 @@
+<div class="sidenav" id="mobile-menu">
+    <div class="user-view">
+        <div class="background lazy-image" data-src="/img/header_bgr.svg">
+            <a href="/img/logo.svg" class="logo lazy-image" data-src="/img/logo.svg"></a>
+        </div>
+    </div>
+    <div class="categories">
+        <div class="sidebar-navi" data-top="Главная">
+            <div class="folder-back-wrapper">
+                <a id="folder-back" class="icon back" title="Назад" data-top="Главная"><span id="folder-name">Главная</span></a>
+            </div>
+        </div>
+        <ul class="expanded">
+            <li class="folder">
+                <a href="/catalog.html">Каталог</a>
+                <a class="folder-link"></a>
+                @@include('./catalog.html', {class: ''})
+            </li>
+            <li><a href="/service.html">Сервисная служба</a></li>
+            <li><a href="/news.html">Новости</a></li>
+            <li><a href="/about.html">О компании</a></li>
+            <li><a href="/contacts.html">Контакты</a></li>
+            <li><a href="/promo.html">Спецпредложения</a></li>
+        </ul>
+    </div>
+</div>
