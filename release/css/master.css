@@ -4424,7 +4424,7 @@ body {
       body .form-wrapper .container .form-header {
         font-size: 24px;
         text-transform: uppercase; }
-  body .sidenav #folder-back {
+  body .sidenav .folder-back {
     margin: 0 15px; }
   body .sidenav .user-view {
     height: 140px; }
@@ -4777,6 +4777,16 @@ input[type="number"] {
     -webkit-appearance: none;
     margin: 0; }
 
+.breadcrumbs {
+  display: flex; }
+  .breadcrumbs .crumb-separator {
+    padding: 0 6px; }
+  .breadcrumbs * {
+    color: #8f8f8f; }
+  .breadcrumbs a:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px; }
+
 #main #top-slider li img {
   background-size: auto 100%;
   background-repeat: no-repeat;
@@ -4879,19 +4889,19 @@ input[type="number"] {
   font-weight: 500;
   text-transform: uppercase; }
 
-.categories .folder-back-wrapper #folder-back, .sidenav .categories .folder-back-wrapper #folder-back {
+.categories .folder-back-wrapper .folder-back, .sidenav .categories .folder-back-wrapper .folder-back {
   width: 20px;
   height: 20px;
   background-size: auto 70%;
   white-space: nowrap;
   color: #424242;
   cursor: default; }
-  .categories .folder-back-wrapper #folder-back.link, .sidenav .categories .folder-back-wrapper #folder-back.link {
+  .categories .folder-back-wrapper .folder-back.link, .sidenav .categories .folder-back-wrapper .folder-back.link {
     background: url(../img/back-link.svg) left center no-repeat;
     display: inline-block;
     padding-left: 15px;
     cursor: pointer; }
-    .categories .folder-back-wrapper #folder-back.link:hover, .sidenav .categories .folder-back-wrapper #folder-back.link:hover {
+    .categories .folder-back-wrapper .folder-back.link:hover, .sidenav .categories .folder-back-wrapper .folder-back.link:hover {
       text-decoration: underline; }
 
 .categories ul, .sidenav .categories ul {
@@ -5118,7 +5128,7 @@ input[type="number"] {
   background-size: cover; }
 
 #product h1 {
-  margin-bottom: 0; }
+  margin: 0; }
 
 #product .product-image {
   padding-top: 75%;

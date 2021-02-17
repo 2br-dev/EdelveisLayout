@@ -11,6 +11,9 @@
                 <div class="container">
                     <div class="row">
                         <div class="col s12">
+                            @@include('./parts/breadcrumbs.html', {divider: "/"})
+                        </div>
+                        <div class="col s12">
                             <div class="section-header">Каталог</div>
                         </div>
                     </div>
@@ -18,9 +21,9 @@
                         <div class="col s12">
                             <div class="catalog-wrapper">
                                 <div class="categories">
-                                    <div class="sidebar-navi" data-top="Главная">
+                                    <div class="sidebar-navi">
                                         <div class="folder-back-wrapper">
-                                            <a id="folder-back" class="icon back" title="Назад" data-top="Главная"><span id="folder-name">Главная</span></a>
+                                            <a class="folder-back icon back link" title="Назад"><span class="folder-name">Каталог</span></a>
                                         </div>
                                     </div>
                                     @@include('./parts/catalog.html', {class: 'expanded'})

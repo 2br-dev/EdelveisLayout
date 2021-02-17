@@ -32600,7 +32600,7 @@ $(() => {
     // $('body').on('mouseenter', '.folder', openPopupMega);
     // $('body').on('mouseout', '.folder, .folder-content', closePopupMega);
     $('body').on('click', '.categories .folder-link', innerMenu);
-    $('body').on('click', '.categories #folder-back', outerMenu);
+    $('body').on('click', '.categories .folder-back', outerMenu);
     $('body').on('click', '#product-carousel .carousel-item', enlargeImage);
     $('body').on('keyup', 'textarea', updateTextarea);
     $(window).on('resize', initAboutCarousel);
@@ -32616,7 +32616,42 @@ $(() => {
 
     initAboutCarousel();
     initProductCarousel();
+    initSideMenu();
 });
+
+function initSideMenu(){
+
+    if($('.catalog-ul').length){
+
+        var current_id;
+        
+        $('.categories').each((index, category) => {
+            
+            currentId = readCookie('current_id') || 0;
+            var limit;
+
+            if(!$(category).parents('.sidenav').length){
+                if(parseInt(currentId) == 0){
+                    currentId="1"
+                }
+                limit = 1;
+            }else{
+                limit = 0;
+            }
+
+            var current_folder = $(category).find('[data-id='+currentId+']');
+            var current_parent = current_folder.data('parent');
+            var folder_name_wrapper = $(category).find('.folder-name');
+            current_folder.addClass('expanded');
+            folder_name_wrapper.text(current_parent);
+
+            if(parseInt(currentId) == limit){
+                $(category).find('.folder-back').removeClass('link');
+            }
+
+        });
+    }
+}
 
 function enlargeImage(){
     var backgroundImage = ($(this).css('backgroundImage'));
@@ -32657,35 +32692,58 @@ function updateTextarea(){
 // Боковое меню каталога – выход из папки
 function outerMenu(e){
     e.preventDefault();
-    var parentFolderName = $($(this).parents('.categories').find('.expanded').closest('li').parents('li').children()[0]).text();
-    var parentFolder = $(this).parents('.categories').find('.expanded').closest('li').closest('ul').addClass('expanded');
 
-    if(parentFolderName == ""){
-        parentFolderName = $(this).data('top');
-        $(this).removeClass('link');
+    if(!$(this).hasClass('link')){
+        return;
     }
 
-    $(this).parents('.categories').find('#folder-name').text(parentFolderName);
-    $(this).parents('.categories').find('.expanded').removeClass('expanded');
-    parentFolder.addClass('expanded');    
+    var parentFolderEl = $(this).parents('.categories').find('.expanded').parents('ul');
+    var parentFolder = parentFolderEl.data('parent');
+    var parentId = parentFolderEl.data('id');
+
+    $('.categories').each((index, category) => {
+        var limit;
+        if($(category).parents('.sidenav').length){
+            limit = 0;
+        }else{
+            limit = 1;
+        }
+
+        if(parentId >= limit){
+            $(category).find('.expanded').removeClass('expanded');
+            $(category).find('[data-id='+parentId+']').addClass('expanded');
+            $(category).find('.folder-name').text(parentFolder);
+        }
+
+        document.cookie = ['current_id='+parentId];
+    })
+
+
+    $('.folder-name').each((index, el) => {
+        if(parseInt(parentId) <= 1 && !$(el).parents('.categories').find('[data-id='+(parentId-1)+']').length){
+            $(el).parent().removeClass('link');
+        }
+    });
 }
 
 // Боковое меню каталога – вход в папку
 function innerMenu(e){
     
-    var folder = $(this).next('ul');
-    
-    prev = current;
-    current = $(this).prev().text();
-
     e.preventDefault();
-    $('#folder-name').text(current);
-    $(this).parents('.categories').find('.expanded').removeClass('expanded');
-    folder.addClass('expanded');
-    levels ++;
 
-    if(levels > 0){
-        $(this).parents('.categories').find('#folder-back').addClass('link');
+    var folder = $(this).next('ul').data('id');
+    var folderNameWrapper = $('.folder-back');
+    var prevText = $(this).next('ul').data('parent');
+    var newCurrent = $(this).next('ul').data('id');   
+
+    $('.categories .expanded').removeClass('expanded');
+    $('[data-id='+folder+']').addClass('expanded');
+    $('.folder-name').text(prevText);
+    
+    document.cookie = "current_id="+ newCurrent;
+
+    if(newCurrent > 1){
+        folderNameWrapper.addClass('link');
     }
 }
 
@@ -32796,6 +32854,18 @@ function initMap(){
             this.getTargetElement().style.cursor = '';
         }
     });
+}
+
+// Чтение куков
+function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
 }
 function brand(){
     console.log(`
