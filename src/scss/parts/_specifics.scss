@@ -23,13 +23,30 @@
     
     & .specific-header{
         line-height: 30px;
-        display: block;
+        display: flex;
         border-top: 1px solid #ccc;
         white-space: nowrap;
         background: #eee;
         color: #777;
         padding: 0 10px;
         cursor: pointer;
+
+        & .name{
+            display: block;
+            flex-grow: 1;
+        }
+
+        & .icon{
+            display: block;
+            padding: 0;
+
+            & i{
+                margin: 0;
+                display: block;
+                transform: translate(3px, 3px);
+                transition: transform .3s;
+            }
+        }
 
         &:last-of-type{
             border-bottom: 1px solid #ccc;
@@ -38,6 +55,13 @@
         &.active{
             background: $green;
             color: #eee;
+
+            & .icon{
+
+                & i{
+                    transform: translate(3px, 3px) rotate(180deg);
+                }
+            }
 
             &:hover{
                 background: $green;
@@ -51,20 +75,34 @@
 
         @media(min-width: 800px){
             display: none;
+
+            & .icon{
+                display: none;
+            }
         }
     }
 
     & .specific-body{
-        padding: 10px 0;
-        display: none;
+        overflow: hidden;
+        max-height: 0;
+        box-sizing: border-box;
+        display: flex;
+        opacity: 0;
+        
+        @media(max-width: 800px){
 
-        &.active{
-            display: flex;
+            transition: max-height .4s, opacity .4s;
 
-            @media(max-width: 800px){
+            &.active{
                 display: block;
                 padding-top: 0;
             }
+        }
+        
+        &.active{
+            
+            padding: 10px 0;
+            opacity: 1;
         }
 
         & .title{

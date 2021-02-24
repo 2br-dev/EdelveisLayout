@@ -27,8 +27,13 @@ function openTab(e){
     e.preventDefault();
     var target = $(this).attr('href');
     var id = target.replace('#', '');
-    $('.specific-body, .specific-header').removeClass('active');
-    $('[data-id="'+id+'"').addClass('active');
+    var targetEl = $('[data-id="'+id+'"]');
+    $('.specific-body, .specific-header').removeClass('active').attr("style", "");
+    var specHeight = $(targetEl).find('.title').outerHeight() + $(targetEl).find('.intro').outerHeight() + $(window).outerWidth() *.65;
+    
+    $('[data-id="'+id+'"').addClass('active').css({
+        maxHeight: specHeight+'px'
+    });
     $('[href="'+target+'"]').addClass('active');
 }
 
@@ -60,8 +65,12 @@ function init(){
 }
 
 function initSpecifics(){
+    var targetEl = $('[data-id="spec-0"]');
+    var specHeight = $(targetEl).find('.title').outerHeight() + $(targetEl).find('.intro').outerHeight() + $(window).outerWidth() *.65;
     $($('.specific-header')[0]).addClass('active');
-    $($('.specific-body')[0]).addClass('active');
+    $($('.specific-body')[0]).addClass('active').css({
+        maxHeight: specHeight+'px'
+    });
     $('.specific-header').each((index, header) => {
         var clone = $(header).clone();
         $('.specific-headers').append(clone);
