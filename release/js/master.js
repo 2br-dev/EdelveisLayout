@@ -32593,10 +32593,10 @@ var prev = "";
 var levels = 0;
 var about_carousel;
 var sidenav;
+var storedImage
 
 // Закрепление эвентов
 $(() => {
-    $('.lazy-image').lazy();
     // $('body').on('mouseenter', '.folder', openPopupMega);
     // $('body').on('mouseout', '.folder, .folder-content', closePopupMega);
     $('body').on('click', '.categories .folder-link', innerMenu);
@@ -32604,20 +32604,65 @@ $(() => {
     $('body').on('click', '#product-carousel .carousel-item', enlargeImage);
     $('body').on('keyup', 'textarea', updateTextarea);
     $(window).on('resize', initAboutCarousel);
-    $(window).on('resize', initProductCarousel);
+    $('body').on('click', '.arrow-left', productSliderPrev);
+    $('body').on('click', '.arrow-right', productSliderNext);
+    $('body').on('click', '.specific-header', openTab);
+    
+    init();
+});
+
+function openTab(e){
+    e.preventDefault();
+    var target = $(this).attr('href');
+    var id = target.replace('#', '');
+    $('.specific-body, .specific-header').removeClass('active');
+    $('[data-id="'+id+'"').addClass('active');
+    $('[href="'+target+'"]').addClass('active');
+}
+
+function init(){
+    initAboutCarousel();
+    initProductCarousel();
+    initSideMenu();
+    initSpecifics();
+
+    $('.lazy-image').lazy();
+    $('.materialboxed').materialbox({
+        onOpenStart: e => {
+            storedImage = $(e).css('background-image');
+        },
+        onCloseEnd: e => {
+            $(e).css({
+                backgroundImage: storedImage
+            })
+        }
+    });
 
     if($('#top-slider').length){
         topSlider = M.Slider.init(document.querySelector('#top-slider'));
     }
-
+    
     if($('.sidenav').length){
         sidenav = M.Sidenav.init(document.querySelector('.sidenav'));
     }
+}
 
-    initAboutCarousel();
-    initProductCarousel();
-    initSideMenu();
-});
+function initSpecifics(){
+    $($('.specific-header')[0]).addClass('active');
+    $($('.specific-body')[0]).addClass('active');
+    $('.specific-header').each((index, header) => {
+        var clone = $(header).clone();
+        $('.specific-headers').append(clone);
+    })
+}
+
+function productSliderNext(){
+    about_carousel[0].next();
+}
+
+function productSliderPrev(){
+    about_carousel[0].prev();
+}
 
 function initSideMenu(){
 
@@ -32666,7 +32711,8 @@ function initAboutCarousel(){
     if($('#certificates').length){
         var elems = document.querySelectorAll('#certificates');
         about_carousel = M.Carousel.init(elems, {
-            dist: -50
+            dist: -50,
+            duration: 200
         });
     }
 }

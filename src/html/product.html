@@ -19,20 +19,31 @@
                             <h1 class="condensed">HOLMER Terra Dos T2</h1>
                             <strong class="subheader condensed">Самоходный свеклоуборочный комбайн</strong>
                         </div>
+                        <div class="col s12">
+                            <div class="labels">
+                                <div class="label">Новинка</div>
+                                <div class="label">Лидер продаж</div>
+                                <div class="label">-10%</div>
+                            </div>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col l5 m6 s12">
                             <p>
-                                <div class="product-image lazy-image" data-src="/img/fish/product1.jpg"></div>
-                                <div class="carousel" id="product-carousel">
-                                    <div class="carousel-item lazy-image" data-src="/img/fish/product1.jpg"></div>
-                                    <div class="carousel-item lazy-image" data-src="/img/fish/product2.jpg"></div>
-                                    <div class="carousel-item lazy-image" data-src="/img/fish/product3.jpg"></div>
-                                    <div class="carousel-item lazy-image" data-src="/img/fish/product4.jpg"></div>
-                                    <div class="carousel-item lazy-image" data-src="/img/fish/product5.jpg"></div>
-                                    <div class="carousel-item lazy-image" data-src="/img/fish/product3.jpg"></div>
-                                    <div class="carousel-item lazy-image" data-src="/img/fish/product4.jpg"></div>
-                                    <div class="carousel-item lazy-image" data-src="/img/fish/product5.jpg"></div>
+                                <div class="product-image lazy-image materialboxed" data-src="/img/fish/product1.jpg"></div>
+                                <div class="carousel-wrapper">
+                                    <a class="arrow arrow-left"><i class="material-icons">chevron_left</i></a>
+                                    <div class="carousel" id="product-carousel">
+                                        <div class="carousel-item lazy-image" data-src="/img/fish/product1.jpg"></div>
+                                        <div class="carousel-item lazy-image" data-src="/img/fish/product2.jpg"></div>
+                                        <div class="carousel-item lazy-image" data-src="/img/fish/product3.jpg"></div>
+                                        <div class="carousel-item lazy-image" data-src="/img/fish/product4.jpg"></div>
+                                        <div class="carousel-item lazy-image" data-src="/img/fish/product5.jpg"></div>
+                                        <div class="carousel-item lazy-image" data-src="/img/fish/product3.jpg"></div>
+                                        <div class="carousel-item lazy-image" data-src="/img/fish/product4.jpg"></div>
+                                        <div class="carousel-item lazy-image" data-src="/img/fish/product5.jpg"></div>
+                                    </div>
+                                    <a class="arrow arrow-right"><i class="material-icons">chevron_right</i></a>
                                 </div>
                             </p>
                         </div>
@@ -63,6 +74,17 @@
                             <br>
                             <p>Скачать PDF (2,35 Мб)</p>
                         </div>
+                    </div>
+                </div>
+            </section>
+            <div class="container">
+                <div class="divider"></div>
+            </div>
+            <section>
+                <div class="container">
+                    <div class="specifics-wrapper">
+                        <div class="specific-headers"></div>
+                        @@loop('./parts/specifics.html', './data/specifics.json')
                     </div>
                 </div>
             </section>

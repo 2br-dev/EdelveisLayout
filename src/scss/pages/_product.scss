@@ -9,22 +9,53 @@
         background-size: cover;
     }
 
-    & #product-carousel{
+    & .carousel-wrapper{
 
+        position: relative;
         margin-top: 30px;
-        // height: unset;
 
-        & .carousel-item{
-            box-sizing: border-box;
-            width: 170px;
-            height: 120px;
-            background-size: cover;
-            cursor: pointer;
-            transition: box-shadow .2s;
+        & .arrow{
+            border: 1px solid $green;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 20;
+            background: #fff;
+            padding: 15px 0;
+            transition: color .2s, background .2s;
+            
+            &:hover{
+                color: #fff;
+                background: $green;
+            }
+            
+            
+            &.arrow-left{
+                left: -5px;
+                border-left-color: transparent;
+            }
+            
+            &.arrow-right{
+                right: -5px;
+                border-right-color: transparent;
+            }
+        }
 
-            &:hover, &.active{
-                box-shadow: 0 0 0 4px $green inset;
+        & #product-carousel{
+    
+            & .carousel-item{
+                box-sizing: border-box;
+                width: 170px;
+                height: 120px;
+                background-size: cover;
+                cursor: pointer;
+                transition: box-shadow .2s;
+    
+                &:hover, &.active{
+                    box-shadow: 0 0 0 4px $green inset;
+                }
             }
         }
     }
+
 }
