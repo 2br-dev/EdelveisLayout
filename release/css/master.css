@@ -4459,8 +4459,26 @@ body {
       body .form-wrapper .container .form-header {
         font-size: 24px;
         text-transform: uppercase; }
+  body .sidenav .user-view {
+    margin: 0; }
   body .sidenav .folder-back {
     margin: 0 15px; }
+  body .sidenav .searcher {
+    display: flex;
+    width: 100%;
+    padding: 6px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    background: #333; }
+    body .sidenav .searcher input {
+      display: block;
+      flex-grow: 1;
+      border: 0;
+      background: transparent;
+      color: #fff !important; }
+    body .sidenav .searcher i {
+      line-height: 30px;
+      color: #777; }
   body .sidenav .user-view {
     height: 140px; }
     body .sidenav .user-view .background {

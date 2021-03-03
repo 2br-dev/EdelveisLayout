@@ -105,7 +105,13 @@ function initSideMenu(){
                 limit = 0;
             }
 
-            var current_folder = $(category).find('[data-id='+currentId+']');
+            var current_folder = $(category).find('ul[data-id='+currentId+']');
+            if(!current_folder.length){
+                var temp = $(category).find('li[data-id='+currentId+']').data('parent');
+                current_folder = $(category).find('ul[data-id='+temp+']');
+            }
+
+            // var current_folder = $(category).find('[data-id='+currentId+']');
             var current_parent = current_folder.data('parent');
             var folder_name_wrapper = $(category).find('.folder-name');
             current_folder.addClass('expanded');
@@ -182,7 +188,7 @@ function outerMenu(e){
             $(category).find('.folder-name').text(parentFolder);
         }
 
-        document.cookie = ['current_id='+parentId];
+        // document.cookie = ['current_id='+parentId];
     })
 
 
@@ -207,7 +213,7 @@ function innerMenu(e){
     $('[data-id='+folder+']').addClass('expanded');
     $('.folder-name').text(prevText);
     
-    document.cookie = "current_id="+ newCurrent;
+    // document.cookie = "current_id="+ newCurrent;
 
     if(newCurrent > 1){
         folderNameWrapper.addClass('link');
