@@ -19,7 +19,7 @@ var browserSync = require('browser-sync').init({
 gulp.task('js', function(){
 	return gulp.src('./src/js/*.js')
 		.pipe(order([
-			"jquery.min.js",
+			"!jquery.min.js",
 			"jquery.lazy.js",
 			"materialize.js",
 			"swiper-bundle.js",
