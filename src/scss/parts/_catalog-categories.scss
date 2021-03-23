@@ -1,3 +1,93 @@
+@mixin sidenav-ul{
+    & li{
+        overflow: hidden;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        line-height: 0px !important;;
+        
+        & > a{
+            
+            line-height: 0px !important;
+            color: $green;
+            overflow: hidden;
+            height: 0;
+
+            &:first-of-type{
+                flex-grow: 1;
+            }
+
+            &.folder-link{
+                width: 40px;
+                flex-shrink: 0;
+                background-image: url(../img/folder.svg);
+                background-position: center;
+                background-size: 10px auto;
+                background-repeat: no-repeat;
+            }
+        }
+
+        &.folder{
+
+            &.folder-link{
+                background-image: url(../img/folder.svg);
+                background-position: right 10px center;
+                background-size: 10px auto;
+                background-repeat: no-repeat;
+            }
+        }
+        
+        & a{
+            display: block;
+            line-height: 0px;
+            overflow: hidden;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            transform: translateX(-20px);
+            opacity: 0;
+            transition: transform .2s, opacity .2s;
+        }
+
+        @for $i from 1 to 20 {
+            &:nth-child(#{$i}){
+
+                & > a{
+                    transition-delay: #{$i * .03s};
+                }
+            }
+        }
+    }
+
+    width: 100%;
+
+    &.expanded{
+
+        & > li{
+
+            border-bottom: 1px solid #cecece;
+            height: 40px !important;
+            
+            &:first-of-type{
+                border-top: 1px solid #cecece;
+            }
+            
+            & > a{
+                
+                height: 40px !important;
+                line-height: 40px !important;
+                padding: 0 15px;
+                opacity: 1;
+                transform: none;
+        
+                &:hover{
+                    background-color: #ececec;
+                }
+            }
+        }
+    }
+}
+
 .categories, .sidenav .categories{
 
     .folder-back-wrapper{
@@ -32,93 +122,15 @@
     }
 
     & ul{
-
-        & li{
-            overflow: hidden;
-            display: flex;
-            flex-wrap: wrap;
-            width: 100%;
-            line-height: 0px !important;;
-            
-            & > a{
-                
-                line-height: 0px !important;
-                color: $green;
-                overflow: hidden;
-                height: 0;
-    
-                &:first-of-type{
-                    flex-grow: 1;
-                }
-    
-                &.folder-link{
-                    width: 40px;
-                    flex-shrink: 0;
-                    background-image: url(../img/folder.svg);
-                    background-position: center;
-                    background-size: 10px auto;
-                    background-repeat: no-repeat;
-                }
-            }
-    
-            &.folder{
-    
-                &.folder-link{
-                    background-image: url(../img/folder.svg);
-                    background-position: right 10px center;
-                    background-size: 10px auto;
-                    background-repeat: no-repeat;
-                }
-            }
-            
-            & a{
-                display: block;
-                line-height: 0px;
-                overflow: hidden;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                transform: translateX(-20px);
-                opacity: 0;
-                transition: transform .2s, opacity .2s;
-            }
-    
-            @for $i from 1 to 20 {
-                &:nth-child(#{$i}){
-    
-                    & > a{
-                        transition-delay: #{$i * .03s};
-                    }
-                }
-            }
-        }
-
-        width: 100%;
-
-        &.expanded{
-
-            & > li{
-
-                border-bottom: 1px solid #cecece;
-                height: 40px !important;
-                
-                &:first-of-type{
-                    border-top: 1px solid #cecece;
-                }
-                
-                & > a{
-                    
-                    height: 40px !important;
-                    line-height: 40px !important;
-                    padding: 0 15px;
-                    opacity: 1;
-                    transform: none;
-            
-                    &:hover{
-                        background-color: #ececec;
-                    }
-                }
-            }
-        }
+        @include sidenav-ul();
     }
+
+}
+
+.top-dublicate{
+    @include sidenav-ul();
+}
+
+.dublicate{
+    margin-top: 60px;
 }

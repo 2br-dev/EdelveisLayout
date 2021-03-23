@@ -6,22 +6,24 @@
     </div>
     <form class="searcher"><i class="material-icons">search</i><input type="text" placeholder="Поиск"></form>
     <div class="categories">
-        <div class="sidebar-navi" data-top="Главная">
+        <div class="sidebar-navi" data-top="Каталог">
             <div class="folder-back-wrapper">
-                <a class="folder-back link" class="icon back" title="Назад" data-top="Главная"><span class="folder-name">Главная</span></a>
+                <a class="folder-back link icon back" title="Назад" data-top="Каталог"><span class="folder-name">Каталог</span></a>
             </div>
+            @@include('./catalog.html', {class: 'expanded', parent: 'Каталог'})
         </div>
-        <ul data-id="0" data-parent="Главная">
-            <li class="folder">
-                <a href="/catalog.html">Каталог</a>
-                <a class="folder-link"></a>
-                @@include('./catalog.html', {class: ''})
-            </li>
-            <li><a href="/service.html">Сервисная служба</a></li>
-            <li><a href="/news.html">Новости</a></li>
-            <li><a href="/about.html">О компании</a></li>
-            <li><a href="/contacts.html">Контакты</a></li>
-            <li><a href="/promo.html">Спецпредложения</a></li>
-        </ul>
+
     </div>
+    <div class="folder-back-wrapper dublicate">
+        <div class="folder-back link"><span>Быстрый переход</span></div>
+    </div>
+    <ul data-id="0" class="top-dublicate expanded">
+        <li><a href="/">Главная</a></li>
+        <li><a href="/catalog.html">Каталог</a></li>
+        <li><a href="/service.html">Сервисная служба</a></li>
+        <li><a href="/news.html">Новости</a></li>
+        <li><a href="/about.html">О компании</a></li>
+        <li><a href="/contacts.html">Контакты</a></li>
+        <li><a href="/promo.html">Спецпредложения</a></li>
+    </ul>
 </div>

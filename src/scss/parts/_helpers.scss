@@ -273,6 +273,18 @@ body {
         }
     }
 
+    & .fixed-action-btn{
+
+        & a{
+            background: url(../img/phone.svg) center center no-repeat;
+            background-size: 20px auto;
+        }
+
+        @media(min-width: 1050px){
+            display: none;
+        }
+    }
+
     & .labels{
     
         display: flex;

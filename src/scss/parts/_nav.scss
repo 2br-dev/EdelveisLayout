@@ -147,7 +147,7 @@ header{
 
                     & .right{
 
-                        @media(max-width: 900px){
+                        @media(max-width: 1050px){
                             display: none;
                         }
 
@@ -159,7 +159,7 @@ header{
                 }
             }
 
-            @media(max-width: 900px){
+            @media(max-width: 1050px){
 
                 & .top{
 
@@ -194,6 +194,11 @@ header{
     
                             &.vkontakte{
                                 background: url(../img/vk.svg) center center no-repeat;
+                                background-size: 80% auto;
+                            }
+
+                            &.mail{
+                                background: url(../img/mail.svg) center center no-repeat;
                                 background-size: 80% auto;
                             }
     

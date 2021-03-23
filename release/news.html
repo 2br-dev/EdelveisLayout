@@ -42,13 +42,14 @@
                             <li class="dot-link"><a class="facebook">Facebook</a></li>
                             <li class="dot-link"><a class="vkontakte">Vkontakte</a></li>
                             <li class="dot-link"><a class="instagram">Instagram</a></li>
+                            <li class="dot-link"><a class="mail">edelveis.agro@gmail.com</a></li>
                             <li class="right dot-link"><a>7 (903) 452-41-11</a></li>
                         </ul>
                     </div>
                     <ul class="bottom">
                         <li class="top-catalog-wrapper dot-link">
                             <a>Каталог</a>
-                            <ul class="catalog-ul" data-id="1" data-parent="Каталог">
+                            <ul class="catalog-ul @@class" data-id="1" data-parent="@@parent">
     <li class="folder">
         <a href="/catalog.html">Техника</a>
         <a class="folder-link"></a>
@@ -218,16 +219,11 @@
     </div>
     <form class="searcher"><i class="material-icons">search</i><input type="text" placeholder="Поиск"></form>
     <div class="categories">
-        <div class="sidebar-navi" data-top="Главная">
+        <div class="sidebar-navi" data-top="Каталог">
             <div class="folder-back-wrapper">
-                <a class="folder-back link" class="icon back" title="Назад" data-top="Главная"><span class="folder-name">Главная</span></a>
+                <a class="folder-back link icon back" title="Назад" data-top="Каталог"><span class="folder-name">Каталог</span></a>
             </div>
-        </div>
-        <ul data-id="0" data-parent="Главная">
-            <li class="folder">
-                <a href="/catalog.html">Каталог</a>
-                <a class="folder-link"></a>
-                <ul class="catalog-ul" data-id="1" data-parent="Каталог">
+            <ul class="catalog-ul expanded" data-id="1" data-parent="Каталог">
     <li class="folder">
         <a href="/catalog.html">Техника</a>
         <a class="folder-link"></a>
@@ -371,14 +367,21 @@
     </li>
     <li><a href="/catalog.html">Запчасти</a></li>
 </ul>
-            </li>
-            <li><a href="/service.html">Сервисная служба</a></li>
-            <li><a href="/news.html">Новости</a></li>
-            <li><a href="/about.html">О компании</a></li>
-            <li><a href="/contacts.html">Контакты</a></li>
-            <li><a href="/promo.html">Спецпредложения</a></li>
-        </ul>
+        </div>
+
     </div>
+    <div class="folder-back-wrapper dublicate">
+        <div class="folder-back link"><span>Быстрый переход</span></div>
+    </div>
+    <ul data-id="0" class="top-dublicate expanded">
+        <li><a href="/">Главная</a></li>
+        <li><a href="/catalog.html">Каталог</a></li>
+        <li><a href="/service.html">Сервисная служба</a></li>
+        <li><a href="/news.html">Новости</a></li>
+        <li><a href="/about.html">О компании</a></li>
+        <li><a href="/contacts.html">Контакты</a></li>
+        <li><a href="/promo.html">Спецпредложения</a></li>
+    </ul>
 </div>
     <main>
         <div class="global-wrapper" id="news">
@@ -481,7 +484,10 @@
             </section>
         </div>
     </main>
-    <footer>
+    <div class="fixed-action-btn">
+    <a href="tel:79034524111" class="btn-floating btn-large green icon phone"></a>
+</div>
+<footer>
     <div class="container">
         <div class="row top-row">
             <div class="col l3 m4 s12">
@@ -506,7 +512,7 @@
                     Отправляя почту, Вы даете согласие на получение Вами электронных уведомлений о новостях сайта, акциях компании, и обновлениях на сайте согласно  Федеральному Закону № 152-ФЗ «Об обработке персональных данных»  и Политике конфиденциальности компании.
                 </p>
             </div>
-            <div class="col l3 offset-l1 m8 s12">
+            <div class="col l3 offset-l1 m4 s12">
                 <div class="footer-header">Социальные сети</div>
                 <div class="icons">
                     <a href="" class="social-icon" id="vk"></a>
@@ -514,9 +520,11 @@
                     <a href="" class="social-icon" id="yt"></a>
                     <a href="" class="social-icon" id="in"></a>
                 </div>
-                <div class="phone">
-                    7 (903) 452-41-11
-                </div>
+            </div>
+            <div class="col l3 offset-l1 m6 s12">
+                <div class="footer-header">Контакты</div>
+                <a href="tel:79034524111">7 (903) 452-41-11</a><br>
+                <a href="mailto:edelveis.agro@gmail.com">edelveis.agro@gmail.com</a>
             </div>
         </div>
     </div>
