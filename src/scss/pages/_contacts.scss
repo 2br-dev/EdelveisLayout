@@ -31,6 +31,22 @@
         }
     }
 
+    & .main-contact{
+        text-transform: uppercase;
+        font-size: 21px;
+        
+        & a{
+            font-weight: 600;
+        }
+
+        @media(max-width: 500px){
+            & a{
+                display: block;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
     & .contacts-block{
 
         & .contacts-header{

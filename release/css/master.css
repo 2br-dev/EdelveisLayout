@@ -5298,6 +5298,15 @@ input[type="number"] {
     height: 50vh; }
     #contacts #map .ol-overlaycontainer-stopevent {
       display: none; }
+  #contacts .main-contact {
+    text-transform: uppercase;
+    font-size: 21px; }
+    #contacts .main-contact a {
+      font-weight: 600; }
+    @media (max-width: 500px) {
+      #contacts .main-contact a {
+        display: block;
+        margin-bottom: 20px; } }
   #contacts .contacts-block .contacts-header {
     font-weight: bold;
     font-size: 24px;

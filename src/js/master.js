@@ -185,7 +185,7 @@ function outerMenu(e){
         if(parentId >= limit){
             $(category).find('.expanded').removeClass('expanded');
             $(category).find('[data-id='+parentId+']').addClass('expanded');
-            $(category).find('.sidebar-navi .folder-name').text(parentFolder);
+            $(category).find('.folder-name').text(parentFolder);
         }
 
         // document.cookie = ['current_id='+parentId];
@@ -205,11 +205,11 @@ function innerMenu(e){
     e.preventDefault();
 
     var folder = $(this).next('ul').data('id');
-    var folderNameWrapper = $('.sidebar-navi .folder-back');
+    var folderNameWrapper = $('.categories .folder-back');
     var prevText = $(this).next('ul').data('parent');
     var newCurrent = $(this).next('ul').data('id');   
 
-    $('.sidebar-navi .expanded').removeClass('expanded');
+    $('.categories .expanded').removeClass('expanded');
     $('[data-id='+folder+']').addClass('expanded');
     $('.folder-name').text(prevText);
     
