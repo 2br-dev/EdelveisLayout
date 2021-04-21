@@ -936,6 +936,8 @@ function init(){
     initSideMenu();
     initSpecifics();
 
+    $('.modal').modal();
+
     $('.lazy-image').lazy();
     $('.materialboxed').materialbox({
         onOpenStart: e => {
