@@ -35,173 +35,326 @@
     }
 
     // Dropdowns
-    &:hover{
+    
+    // &:hover{
         
-        & > a{
+    //     & > a{
 
-            border: 1px solid $secondary-color;
-            border-bottom-color: transparent;
-            background: $mega-bgr;
+    //         border: 1px solid $secondary-color;
+    //         border-bottom-color: transparent;
+    //         background: $mega-bgr;
 
-            & + ul{
-                display: flex;
-                background: $mega-bgr;
-                border: 1px solid $secondary-color;
+    //         & + ul{
+    //             display: flex;
+    //             background: $mega-bgr;
+    //             border: 1px solid $secondary-color;
+    //         }
+    //     }
+        
+    //     & > ul{
+    //         top: calc(100% - 1px);
+    //         width: 720px;
+    //         display: flex;
+    //         position: relative;
+    //         position: absolute;
+    //         z-index: -1;
+
+    //         &:hover > li{
+    //             margin-bottom: 40px;
+    //         }
+
+    //         & > li.folder{
+    //             @include folder-circle();
+                
+    //             & a:after{
+    //                 width: 100%;
+    //                 height: 1px;
+    //                 bottom: -2px;
+    //                 z-index: 2;
+    //                 left: 0;
+    //             }
+    //         }
+
+    //         & > li{
+                
+    //             &:hover{
+    //                 background: $secondary-color;
+
+    //                 & a{
+    //                     color: #fff;
+    //                 }
+
+    //                 & > ul{
+    //                     display: flex;
+    //                     position: absolute;
+    //                     width: 720px;
+    //                     left: 0;
+    //                     border-top: 1px solid lighten($mega-bgr, 10);
+                        
+    //                     &:hover{
+    //                         margin-bottom: 120px;
+    //                     }
+
+    //                     & > li{
+
+    //                         &.folder{
+                                
+    //                             @include folder-circle();
+
+    //                             & > a{
+    //                                 background-image: url(../img/fold-down.svg);
+    //                             }
+    //                         }
+
+    //                         & a{
+    //                             font-size: 16px;
+    //                             font-weight: 400;
+
+    //                         }
+
+    //                         &:hover{
+
+    //                             background-color: transparent;
+
+    //                             & > a{
+    //                                 color: $secondary-color;
+    //                             }
+
+    //                             & > ul{
+    //                                 display: flex;
+    //                                 position: relative;
+    //                                 position: absolute;
+    //                                 border: 1px solid $secondary-color;
+    //                                 border-top: 1px solid lighten($mega-bgr, 10);
+    //                                 background-color: rgba($mega-bgr, .97);
+    //                                 left: -1px;
+    //                                 top: 39px;
+    //                                 width: 720px;
+    //                                 flex-direction: column;
+                                    
+    //                                 & li{
+                                        
+    //                                     width: 239px;
+    //                                     border-right: 1px solid #333;
+
+    //                                     &:not(:last-of-type){
+    //                                         border-bottom: 1px solid #333;
+    //                                     }
+
+    //                                     &.folder{
+
+    //                                         @include folder-circle();
+
+    //                                         & a:after{
+    //                                             width: 2px;
+    //                                             height: 100%;
+    //                                             left: 0px;
+    //                                             right: 2px;
+    //                                             bottom: 0;
+    //                                         }
+    //                                     }
+                                        
+    //                                     & a{
+    //                                         font-weight: 300;
+    //                                         color: #ccc;
+    //                                         overflow: hidden;
+    //                                         text-overflow: ellipsis;
+    //                                         display: block;
+    //                                     }
+
+    //                                     &:hover{
+
+    //                                         background: rgba(black, .7);
+
+    //                                         & >a{
+    //                                             color: $secondary-color;
+    //                                         }
+
+    //                                         & > ul{
+    //                                             display: flex;
+    //                                             flex-direction: column;
+    //                                             position: absolute;
+    //                                             left: 239px;
+    //                                             width: auto;
+    //                                             height: 100%;
+    //                                             border: 0;
+    //                                             top: 0px;
+    //                                             border-right: 1px solid lighten($mega-bgr, 20);
+    //                                             border-left: 1px solid lighten($mega-bgr, 20);
+    //                                         }
+    //                                     }
+    //                                 }
+    //                             }
+    //                         }
+    //                     }
+    //                 }
+    //             }
+
+    //             &.folder{
+
+    //                 & > a{
+    //                     background-image: url(../img/fold-down.svg);
+    //                 }
+    //             }
+
+    //             & a{
+    //                 font-size: 16px;
+    //                 line-height: 40px !important;
+    //                 font-weight: 500;
+    //             }
+    //         }
+    //     }
+    // }
+}
+
+nav{
+
+    & .top{
+       
+        & li{
+        
+            &:nth-last-child(2){
+                
+                &:after{
+                    display: none;
+                }
+            }
+        }
+    }
+    
+    & .bottom{
+
+        display: flex;
+        
+        & > ul > li{
+            &:not(:last-of-type){
+                    
+                &:after{
+                    content: '•';
+                    margin: 0 5px;
+                    color: #ccc;
+                }
+            }
+
+            & > a{
+
+                position: relative;
+
+                &:before{
+                    content:'';
+                    display: block;
+                    border-bottom: 1px solid #fff;
+                    position: absolute;
+                    width: 100%;
+                    bottom: 4px;
+                    transform: scaleX(0);
+                    transition: transform .2s;
+                }
+
+                &:hover:before{
+
+                    transform: scaleX(1);
+                }
             }
         }
         
-        & > ul{
-            top: calc(100% - 1px);
-            width: 720px;
-            display: flex;
+        & li{
+            
             position: relative;
-            position: absolute;
-            z-index: -1;
+            
+            & > a{
+                line-height: 30px;
+                color: #999;
+                display: inline-block;
 
-            &:hover > li{
-                margin-bottom: 40px;
-            }
-
-            & > li.folder{
-                @include folder-circle();
-                
-                & a:after{
-                    width: 100%;
-                    height: 1px;
-                    bottom: -2px;
-                    z-index: 2;
-                    left: 0;
+                &:hover{
+                    color: #fff;
                 }
             }
-
-            & > li{
+            
+            & ul{
+                position: absolute;
+                pointer-events: none;
+                opacity: 0;
+                z-index: 20;
+                display: block;
+                display: flex;
+                flex-direction: column;
+                background: #333;
+                border: 1px solid #444;
                 
-                &:hover{
-                    background: $secondary-color;
-
-                    & a{
-                        color: #fff;
+                & li{
+                    
+                    display: block;
+                    border-bottom: 1px solid #444;
+                    display: flex;
+                    flex-direction: row;
+                    
+                    &.folder{
+                        
+                        & > a{
+                            background-image: url(../img/folder.svg);
+                            padding-right: 40px;
+                            background-repeat: no-repeat;
+                            background-position: right 10px center;
+                            background-size: 10px auto;
+                        }
                     }
-
-                    & > ul{
-                        display: flex;
-                        position: absolute;
-                        width: 720px;
-                        left: 0;
-                        border-top: 1px solid lighten($mega-bgr, 10);
+                    
+                    & a{
+                        display: block;
+                        white-space: nowrap;
+                        line-height: 30px;
+                        padding: 0 10px;
+                        color: #ccc;
                         
                         &:hover{
-                            margin-bottom: 120px;
-                        }
-
-                        & > li{
-
-                            &.folder{
-                                
-                                @include folder-circle();
-
-                                & > a{
-                                    background-image: url(../img/fold-down.svg);
-                                }
-                            }
-
-                            & a{
-                                font-size: 16px;
-                                font-weight: 400;
-
-                            }
-
-                            &:hover{
-
-                                background-color: transparent;
-
-                                & > a{
-                                    color: $secondary-color;
-                                }
-
-                                & > ul{
-                                    display: flex;
-                                    position: relative;
-                                    position: absolute;
-                                    border: 1px solid $secondary-color;
-                                    border-top: 1px solid lighten($mega-bgr, 10);
-                                    background-color: rgba($mega-bgr, .97);
-                                    left: -1px;
-                                    top: 39px;
-                                    width: 720px;
-                                    flex-direction: column;
-                                    
-                                    & li{
-                                        
-                                        width: 239px;
-                                        border-right: 1px solid #333;
-
-                                        &:not(:last-of-type){
-                                            border-bottom: 1px solid #333;
-                                        }
-
-                                        &.folder{
-
-                                            @include folder-circle();
-
-                                            & a:after{
-                                                width: 2px;
-                                                height: 100%;
-                                                left: 0px;
-                                                right: 2px;
-                                                bottom: 0;
-                                            }
-                                        }
-                                        
-                                        & a{
-                                            font-weight: 300;
-                                            color: #ccc;
-                                            overflow: hidden;
-                                            text-overflow: ellipsis;
-                                            display: block;
-                                        }
-
-                                        &:hover{
-
-                                            background: rgba(black, .7);
-
-                                            & >a{
-                                                color: $secondary-color;
-                                            }
-
-                                            & > ul{
-                                                display: flex;
-                                                flex-direction: column;
-                                                position: absolute;
-                                                left: 239px;
-                                                width: auto;
-                                                height: 100%;
-                                                border: 0;
-                                                top: 0px;
-                                                border-right: 1px solid lighten($mega-bgr, 20);
-                                                border-left: 1px solid lighten($mega-bgr, 20);
-                                            }
-                                        }
-                                    }
-                                }
-                            }
+                            background-color: rgba(black, .2);
                         }
                     }
-                }
-
-                &.folder{
-
-                    & > a{
-                        background-image: url(../img/fold-down.svg);
+                    
+                    & ul{
+                        left: 100%;
+                        top: 0;
                     }
                 }
+                
+            }
+            
+            &:hover > ul{
+                opacity: 1;
+                pointer-events: all;
+            }
+        }
+    }
 
-                & a{
+    & .search {
+
+        & ul{
+            
+            display: flex;
+            justify-content: flex-end;
+            margin-top: -23px;
+            
+            & a{
+                
+                & i.mdi{
+                    color: #999;
                     font-size: 21px;
-                    line-height: 40px !important;
-                    font-weight: 500;
+                    padding: 0 6px;
                 }
             }
+        }
+    }
+
+    & .catalog-ul{
+
+        width: fit-content;
+        
+        &:after{
+            content: '•';
+            margin: 0 5px;
+            color: #ccc;
         }
     }
 }

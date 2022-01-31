@@ -132,7 +132,15 @@ header{
                 flex-direction: column;
 
                 & + .search{
-                    display: none;
+
+                    & .search-wrapper{
+                        display: none;
+                    }
+
+                    & ul{
+                        margin: 0;
+                    }
+
                 }
                 
                 &:before, &:after{
@@ -216,6 +224,12 @@ header{
                             }
                         }
                     }
+                }
+            }
+
+            @media(max-width: 600px){
+                & .top{
+                    display: none;
                 }
             }
         }

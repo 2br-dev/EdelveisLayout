@@ -65,10 +65,15 @@
 
         & .kv-wrapper{
 
+            
             & .kv-pair{
-    
+                
                 display: table-row;
-    
+
+                & > *{
+                    padding: 6px 0;
+                }
+                
                 & .key{
                     display: table-cell;
                     padding-right: 20px;
@@ -99,6 +104,18 @@
                     @include flex();
                 }
             }
+        }
+    }
+
+    & .req{
+    
+        display: flex;
+        margin: 8px 0;
+        
+        & .req-key{
+            font-weight: 500;
+            padding-right: 10px;
+            white-space: nowrap;
         }
     }
 }
