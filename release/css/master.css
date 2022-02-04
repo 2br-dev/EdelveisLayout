@@ -23755,32 +23755,95 @@ input[type="number"] {
 #main section#logos {
   border: 1px solid #f0f0f0;
   background: #f0f0f0;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  position: relative; }
+  @media (min-width: 800px) {
+    #main section#logos:before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      pointer-events: none;
+      background: linear-gradient(to left, #f0f0f0 5%, transparent 10%, transparent 90%, #f0f0f0 95%); } }
   #main section#logos .row .logos-wrapper {
     display: flex;
-    flex-wrap: wrap;
-    margin: 30px 0; }
-    #main section#logos .row .logos-wrapper .logo {
-      margin: 10px 0;
-      display: block;
-      flex-grow: 1;
+    overflow: hidden;
+    justify-content: stretch; }
+    #main section#logos .row .logos-wrapper .logos-container {
+      display: flex;
       flex-shrink: 0;
+      margin: 30px 0;
+      min-width: 100%; }
+      #main section#logos .row .logos-wrapper .logos-container .logo {
+        margin: 10px 0;
+        display: block;
+        flex-grow: 1;
+        flex-shrink: 0;
+        padding-top: 60px;
+        background-size: auto 80%;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: transform .2s; }
+        #main section#logos .row .logos-wrapper .logos-container .logo#kverneland {
+          width: 240px; }
+        #main section#logos .row .logos-wrapper .logos-container .logo#kubota {
+          width: 160px; }
+        #main section#logos .row .logos-wrapper .logos-container .logo#holmer {
+          width: 290px; }
+        #main section#logos .row .logos-wrapper .logos-container .logo#samson {
+          width: 220px; }
+        #main section#logos .row .logos-wrapper .logos-container .logo#great-plains {
+          width: 170px; }
+        #main section#logos .row .logos-wrapper .logos-container .logo#apv {
+          width: 170px; }
+        #main section#logos .row .logos-wrapper .logos-container .logo#fuchs {
+          width: 120px; }
+        #main section#logos .row .logos-wrapper .logos-container .logo#agip {
+          width: 180px; }
+        #main section#logos .row .logos-wrapper .logos-container .logo:hover {
+          transform: scale(1.2); }
+  #main section#logos .row .logos-slider {
+    display: flex;
+    overflow: hidden;
+    padding-top: 20px; }
+    #main section#logos .row .logos-slider .logo {
       padding-top: 60px;
-      background-size: auto 80%; }
-      #main section#logos .row .logos-wrapper .logo#kverneland {
-        width: 240px; }
-      #main section#logos .row .logos-wrapper .logo#kubota {
-        width: 160px; }
-      #main section#logos .row .logos-wrapper .logo#holmer {
-        width: 290px; }
-      #main section#logos .row .logos-wrapper .logo#great-plains {
-        width: 170px; }
-      #main section#logos .row .logos-wrapper .logo#apv {
-        width: 170px; }
-      #main section#logos .row .logos-wrapper .logo#fuchs {
-        width: 120px; }
-      #main section#logos .row .logos-wrapper .logo#agip {
-        width: 180px; }
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin-left: 12px;
+      display: block; }
+      #main section#logos .row .logos-slider .logo#kverneland {
+        width: 55%; }
+      #main section#logos .row .logos-slider .logo#kubota {
+        width: 45%; }
+      #main section#logos .row .logos-slider .logo#holmer {
+        width: 60%; }
+      #main section#logos .row .logos-slider .logo#samson {
+        width: 40%; }
+      #main section#logos .row .logos-slider .logo#great-plains {
+        width: 50%; }
+      #main section#logos .row .logos-slider .logo#apv {
+        width: 50%; }
+      #main section#logos .row .logos-slider .logo#fuchs {
+        width: 50%; }
+      #main section#logos .row .logos-slider .logo#agip {
+        width: 50%; }
+    #main section#logos .row .logos-slider .pair {
+      display: flex;
+      min-width: 100%; }
+      #main section#logos .row .logos-slider .pair .logo {
+        flex-grow: 1; }
+  @media (max-width: 600px) {
+    #main section#logos .row .desktop {
+      display: none; } }
+  @media (min-width: 600px) {
+    #main section#logos .row .mobile {
+      display: none; } }
 
 #main section#service {
   margin-top: 0;

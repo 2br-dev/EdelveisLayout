@@ -892,13 +892,18 @@ $(() => {
     });
 })(window);
 // Инициализация переменных
-var topSlider;
-var current = "Главная";
-var prev = "";
-var levels = 0;
-var about_carousel;
-var sidenav;
-var storedImage
+let topSlider;
+let current = "Главная";
+let prev = "";
+let levels = 0;
+let about_carousel;
+let sidenav;
+let storedImage;
+let logosSpeed = 1;
+let logosAnimating;
+
+let af;
+let to;
 
 // Закрепление эвентов
 $(() => {
@@ -909,6 +914,7 @@ $(() => {
     $('body').on('click', '#product-carousel .carousel-item', enlargeImage);
     $('body').on('keyup', 'textarea', updateTextarea);
     $(window).on('resize', initAboutCarousel);
+    $(window).on('resize', updateLogoSlider);
     $('body').on('click', '.arrow-left', productSliderPrev);
     $('body').on('click', '.arrow-right', productSliderNext);
     $('body').on('click', '.specific-header', openTab);
@@ -1235,6 +1241,105 @@ function readCookie(name) {
     }
     return null;
 }
+
+function animateLeft(){
+
+    let wrapper = document.querySelector('.logos-wrapper');
+    let container = document.querySelector('.logos-container');
+    let logos = container.innerHTML;
+    let startPoint = 0;
+    
+    logosWidth = wrapper.clientWidth;
+
+    if( !logosAnimating ){
+    
+        // Инициализация повтора
+        clone = container.cloneNode();
+        clone.innerHTML = logos;
+        wrapper.appendChild( clone );
+
+        // Начало анимации
+        logosAnimating = true;
+    }
+
+    $(wrapper).scrollLeft( $(wrapper).scrollLeft() + logosSpeed );
+
+    if( $( wrapper ).scrollLeft() >= container.clientWidth ){
+        $( wrapper ).scrollLeft( 0 );
+    }
+
+    af = requestAnimationFrame( animateLeft );
+}
+
+function animateRight(){
+
+    let wrapper = document.querySelector('.logos-wrapper');
+    let container = document.querySelector('.logos-container');
+    let logos = container.innerHTML;
+    let startPoint = 0;
+    
+    logosWidth = wrapper.clientWidth;
+
+    if( !logosAnimating ){
+    
+        // Инициализация повтора
+        clone = container.cloneNode();
+        clone.innerHTML = logos;
+        wrapper.appendChild( clone );
+
+        // Начало анимации
+        $(wrapper).scrollLeft( container.clientWidth );
+        logosAnimating = true;
+    }
+
+    $(wrapper).scrollLeft( $(wrapper).scrollLeft() - logosSpeed );
+
+    if( $( wrapper ).scrollLeft() <= 0 ){
+        $(wrapper).scrollLeft( container.clientWidth );
+    }
+
+    af = requestAnimationFrame( animateRight );
+}
+
+function updateLogoSlider(){
+    if( window.innerWidth <= 800 ){
+        cancelAnimationFrame( af );
+        mobileAnimateLeft();
+    }else{
+        clearTimeout( to );
+        cancelAnimationFrame( af );
+        animateLeft();
+    }
+}
+
+function mobileAnimateLeft(){
+    let scrollLeft = $('.logos-slider').scrollLeft();
+    let sliderWidth = $('.logos-slider').outerWidth();
+    let newScrollLeft = scrollLeft + sliderWidth;
+
+    $('.logos-slider').animate({
+        scrollLeft: newScrollLeft
+    }, {
+        duration: 1000,
+        step: ( now ) => {
+            scrollLeft = now
+        },
+        complete: () => {
+            if( scrollLeft == document.querySelector('.logos-slider').scrollWidth - sliderWidth ){
+                $('.logos-slider').scrollLeft( 0 );
+            }
+
+            to = setTimeout( mobileAnimateLeft, 3000);
+        }
+    } );
+}
+
+if( window.innerWidth >= 600 ){
+    animateLeft();
+}else{
+    mobileAnimateLeft();
+}
+
 /*!
  * Materialize v1.0.0 (http://materializecss.com)
  * Copyright 2014-2017 Materialize
