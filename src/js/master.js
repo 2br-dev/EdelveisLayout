@@ -353,6 +353,9 @@ function animateLeft(){
 
     let wrapper = document.querySelector('.logos-wrapper');
     let container = document.querySelector('.logos-container');
+
+    if (!container) return;
+
     let logos = container.innerHTML;
     let startPoint = 0;
     
@@ -382,6 +385,7 @@ function animateRight(){
 
     let wrapper = document.querySelector('.logos-wrapper');
     let container = document.querySelector('.logos-container');
+    if(!container) return;
     let logos = container.innerHTML;
     let startPoint = 0;
     
@@ -420,6 +424,7 @@ function updateLogoSlider(){
 }
 
 function mobileAnimateLeft(){
+    
     let scrollLeft = $('.logos-slider').scrollLeft();
     let sliderWidth = $('.logos-slider').outerWidth();
     let newScrollLeft = scrollLeft + sliderWidth;

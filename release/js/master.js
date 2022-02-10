@@ -1246,6 +1246,9 @@ function animateLeft(){
 
     let wrapper = document.querySelector('.logos-wrapper');
     let container = document.querySelector('.logos-container');
+
+    if (!container) return;
+
     let logos = container.innerHTML;
     let startPoint = 0;
     
@@ -1275,6 +1278,7 @@ function animateRight(){
 
     let wrapper = document.querySelector('.logos-wrapper');
     let container = document.querySelector('.logos-container');
+    if(!container) return;
     let logos = container.innerHTML;
     let startPoint = 0;
     
@@ -1313,6 +1317,7 @@ function updateLogoSlider(){
 }
 
 function mobileAnimateLeft(){
+    
     let scrollLeft = $('.logos-slider').scrollLeft();
     let sliderWidth = $('.logos-slider').outerWidth();
     let newScrollLeft = scrollLeft + sliderWidth;
@@ -1339,7 +1344,6 @@ if( window.innerWidth >= 600 ){
 }else{
     mobileAnimateLeft();
 }
-
 /*!
  * Materialize v1.0.0 (http://materializecss.com)
  * Copyright 2014-2017 Materialize

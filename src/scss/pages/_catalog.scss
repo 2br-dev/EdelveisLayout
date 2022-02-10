@@ -23,6 +23,12 @@
 
             & .product-card{
                 margin: 10px;
+
+                & .image{
+                    background-color: #fff;
+                    background-size: cover;
+                }
+
                 width: calc(25% - 20px);
                 
                 @media(max-width: 1900px){

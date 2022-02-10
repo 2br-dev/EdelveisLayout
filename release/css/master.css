@@ -24084,6 +24084,9 @@ input[type="number"] {
     #catalog .catalog-wrapper .products .product-card {
       margin: 10px;
       width: calc(25% - 20px); }
+      #catalog .catalog-wrapper .products .product-card .image {
+        background-color: #fff;
+        background-size: cover; }
       @media (max-width: 1900px) {
         #catalog .catalog-wrapper .products .product-card {
           width: calc(33.3333% - 20px); } }
