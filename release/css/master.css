@@ -23704,53 +23704,56 @@ input[type="number"] {
 #main #hero {
   margin-top: 0; }
 
-#main #top-slider li img {
-  background-size: auto 100%;
-  background-repeat: no-repeat;
-  background-position: top right 15vw; }
-
-#main #top-slider li .caption {
-  padding-right: 40vw;
-  top: 0;
-  width: 70vw;
-  left: 15vw; }
-  #main #top-slider li .caption h3 {
-    margin-top: 0;
-    font-size: 43px;
-    color: #90989C; }
-  #main #top-slider li .caption p {
-    color: #90989C;
-    background: rgba(62, 62, 62, 0.4);
-    padding: 11px 15px; }
-
-@media (max-width: 1200px) {
+#main #top-slider {
+  height: 20vw !important;
+  min-height: 400px; }
+  #main #top-slider .slides {
+    height: 100%; }
+    #main #top-slider .slides > li {
+      height: 100%; }
   #main #top-slider li img {
-    background-position: top right 7vw; }
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: top right 15vw;
+    height: 100%; }
   #main #top-slider li .caption {
-    width: 86vw;
-    left: 7vw; } }
-
-@media (max-width: 900px) {
-  #main #top-slider li img {
-    margin-top: 80px;
-    height: calc(100% - 80px);
-    background-position: center; }
-  #main #top-slider li .caption {
-    padding-right: 0;
-    text-align: center; }
+    padding-right: 40vw;
+    top: 0;
+    width: 70vw;
+    left: 15vw; }
     #main #top-slider li .caption h3 {
-      font-size: 24px; }
+      margin-top: 0;
+      font-size: 43px;
+      color: #90989C; }
     #main #top-slider li .caption p {
-      display: none; } }
-
-@media (max-width: 700px) {
-  #main #top-slider li .caption h3 {
-    margin-top: 1.168rem; } }
-
-@media (max-width: 450px) {
-  #main #top-slider li img {
-    background-size: 80vw auto;
-    background-position: center; } }
+      color: #90989C;
+      background: rgba(62, 62, 62, 0.4);
+      padding: 11px 15px; }
+  @media (max-width: 1200px) {
+    #main #top-slider li img {
+      background-position: top right 7vw; }
+    #main #top-slider li .caption {
+      width: 86vw;
+      left: 7vw; } }
+  @media (max-width: 900px) {
+    #main #top-slider li img {
+      margin-top: 80px;
+      height: calc(100% - 80px);
+      background-position: center; }
+    #main #top-slider li .caption {
+      padding-right: 0;
+      text-align: center; }
+      #main #top-slider li .caption h3 {
+        font-size: 24px; }
+      #main #top-slider li .caption p {
+        display: none; } }
+  @media (max-width: 700px) {
+    #main #top-slider li .caption h3 {
+      margin-top: 1.168rem; } }
+  @media (max-width: 450px) {
+    #main #top-slider li img {
+      background-size: 80vw auto;
+      background-position: center; } }
 
 #main section#logos {
   border: 1px solid #f0f0f0;

@@ -6,12 +6,26 @@
 
     & #top-slider{
 
+        height: 20vw !important;
+        min-height: 400px;
+
+        & .slides{
+
+            height: 100%;
+
+            & > li{
+                height: 100%;
+            }
+        }
+
+        
         & li{
             
             & img{
                 background-size: auto 100%;
                 background-repeat: no-repeat;
                 background-position: top right 15vw;
+                height: 100%;
             }
             
             & .caption{
