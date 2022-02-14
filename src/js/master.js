@@ -9,6 +9,18 @@ let storedImage;
 let logosSpeed = 1;
 let logosAnimating;
 
+let touchStartX=0;
+let touchEndX=0;
+
+document.addEventListener('touchstart', e => {
+    touchStartX=e.changedTouches[0].screenX;
+});
+
+document.addEventListener('touchend', e => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleGesture();
+})
+
 let af;
 let to;
 
@@ -28,6 +40,18 @@ $(() => {
     
     init();
 });
+
+function handleGesture(){
+
+    if( touchStartX > touchEndX ){
+        // Swipe left
+        topSlider.prev();
+
+    }else{
+        // Swipe right
+        topSlider.next();
+    }
+}
 
 function openTab(e){
     e.preventDefault();

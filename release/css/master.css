@@ -21907,6 +21907,10 @@ body {
   background-size: 100% 200px;
   background-color: #fcfcfc;
   font-family: 'Roboto'; }
+  body .specific-body .content img {
+    max-width: 100%;
+    height: auto;
+    width: auto; }
   body strong.subheader {
     font-weight: bold;
     text-transform: uppercase;

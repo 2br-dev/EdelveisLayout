@@ -4,6 +4,16 @@ body {
     background-size: 100% 200px;
     background-color: $paper;
 
+    .specific-body{
+        & .content{
+            &  img {
+                max-width: 100%;
+                height: auto;
+                width: auto;
+            }
+        }
+    }
+
     & strong.subheader{
         font-weight: bold;
         text-transform: uppercase;
