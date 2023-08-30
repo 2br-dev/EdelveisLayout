@@ -9,13 +9,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "browser-sync": "^2.26.14",
+    "browser-sync": "^2.29.3",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-file-include": "^2.3.0",
-    "gulp-imagemin": "^7.1.0",
+    "gulp-imagemin": "^8.0.0",
     "gulp-order": "^1.2.0",
-    "gulp-sass": "^4.1.0",
-    "gulp-strip-comments": "^2.5.2"
+    "gulp-sass": "^5.1.0",
+    "gulp-strip-comments": "^2.6.0",
+    "node-sass": "^9.0.0",
+    "sass": "^1.66.1"
   }
 }

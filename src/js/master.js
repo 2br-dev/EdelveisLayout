@@ -12,11 +12,11 @@ let logosAnimating;
 let touchStartX=0;
 let touchEndX=0;
 
-document.addEventListener('touchstart', e => {
+document.querySelector('#top-slider').addEventListener('touchstart', e => {
     touchStartX=e.changedTouches[0].screenX;
 });
 
-document.addEventListener('touchend', e => {
+document.querySelector('#top-slider').addEventListener('touchend', e => {
     touchEndX = e.changedTouches[0].screenX;
     handleGesture();
 })
@@ -470,8 +470,8 @@ function mobileAnimateLeft(){
     } );
 }
 
-if( window.innerWidth >= 600 ){
-    animateLeft();
-}else{
-    mobileAnimateLeft();
-}
+// if( window.innerWidth >= 600 ){
+//     animateLeft();
+// }else{
+//     mobileAnimateLeft();
+// }

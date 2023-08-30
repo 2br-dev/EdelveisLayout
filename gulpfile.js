@@ -5,7 +5,9 @@ var order = require('gulp-order');
 var concat = require('gulp-concat');
 // var uglify = require('gulp-uglify');
 // var strip = require('gulp-strip-comments');
-var sass = require('gulp-sass');
+var nodeSass = require('sass');
+var gulpSass = require('gulp-sass');
+var sass = gulpSass(nodeSass);
 var include = require('gulp-file-include');
 const { task } = require('gulp');
 
